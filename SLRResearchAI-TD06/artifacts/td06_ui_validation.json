@@ -1,0 +1,68 @@
+{
+  "origin": "TD06_STREAMLIT_APPTEST",
+  "modes": {
+    "decider": "controlled",
+    "embeddings": "controlled",
+    "extractor": "controlled"
+  },
+  "lineage": {
+    "topic": "Utilisation des LLM pour assister le screening des SLR",
+    "found": 3,
+    "included": 2,
+    "documents_available": 2,
+    "rag_documents": 2,
+    "excluded_from_rag": [
+      "W4410813691"
+    ],
+    "sources": {
+      "search": "TD03/search_results.json",
+      "screening": "TD04/screening_decisions.json",
+      "documents": "document_manifest.json"
+    }
+  },
+  "chunk_count": 5,
+  "scenarios": [
+    {
+      "case_id": "Q3",
+      "budget": 1,
+      "status": "completed",
+      "retrieval_calls": 1,
+      "evidence_status": "verified"
+    },
+    {
+      "case_id": "Q3",
+      "budget": 2,
+      "status": "completed",
+      "retrieval_calls": 1,
+      "evidence_status": "verified"
+    },
+    {
+      "case_id": "Q1",
+      "budget": 1,
+      "status": "budget_exhausted",
+      "retrieval_calls": 1,
+      "evidence_status": null
+    },
+    {
+      "case_id": "Q1",
+      "budget": 2,
+      "status": "completed",
+      "retrieval_calls": 2,
+      "evidence_status": "verified"
+    },
+    {
+      "case_id": "Q2",
+      "budget": 1,
+      "status": "budget_exhausted",
+      "retrieval_calls": 1,
+      "evidence_status": null
+    },
+    {
+      "case_id": "Q2",
+      "budget": 2,
+      "status": "completed",
+      "retrieval_calls": 2,
+      "evidence_status": "verified"
+    }
+  ]
+}

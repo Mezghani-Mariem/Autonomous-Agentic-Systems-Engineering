@@ -1,0 +1,947 @@
+{
+  "mode": "controlled",
+  "actual_llm_calls": 0,
+  "real_llm_protocol_calls": {
+    "direct": 1,
+    "cot": 2,
+    "tot": 3
+  },
+  "comparisons": [
+    {
+      "strategy": "direct",
+      "plan": {
+        "strategy": "direct",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "S1",
+            "rq_id": "RQ1",
+            "objective": "Comparer les sensibilités observées.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S2",
+            "rq_id": "RQ2",
+            "objective": "Comparer gain de charge et risque d'erreur.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "S1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S3",
+            "rq_id": "RQ3",
+            "objective": "Présenter les mécanismes de contrôle et de validation, y compris la validation prospective.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation",
+              "prospective_validation"
+            ],
+            "depends_on": [
+              "S1",
+              "S2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "metrics": {
+        "valid": true,
+        "plan_validity_rate": 1.0,
+        "rq_coverage": 1.0,
+        "section_coverage": 1.0,
+        "consistency": 1.0,
+        "errors": []
+      }
+    },
+    {
+      "strategy": "cot",
+      "plan": {
+        "strategy": "cot",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "C1",
+            "rq_id": "RQ3",
+            "objective": "Présenter d'abord les mécanismes de contrôle déjà étayés.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "C2",
+            "rq_id": "RQ1",
+            "objective": "Comparer ensuite les sensibilités.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [
+              "C1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "C3",
+            "rq_id": "RQ2",
+            "objective": "Terminer par le compromis opérationnel en rapprochant deux extractions de la même étude et une étude d'ensemble.",
+            "evidence_ids": [
+              "E2",
+              "E7",
+              "E4"
+            ],
+            "required_facets": [
+              "threshold_tradeoff",
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "C1",
+              "C2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [
+          "Organiser les preuves par RQ avant la rédaction.",
+          "Faire dépendre la comparaison des synthèses terminées."
+        ],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "metrics": {
+        "valid": true,
+        "plan_validity_rate": 1.0,
+        "rq_coverage": 1.0,
+        "section_coverage": 1.0,
+        "consistency": 1.0,
+        "errors": []
+      }
+    },
+    {
+      "strategy": "tot",
+      "plan": {
+        "strategy": "tot",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "T1",
+            "rq_id": "RQ2",
+            "objective": "Commencer par le compromis décisionnel.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "T2",
+            "rq_id": "RQ1",
+            "objective": "Relier ce compromis aux performances.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "T3",
+            "rq_id": "RQ3",
+            "objective": "Conclure par les mécanismes de contrôle disponibles et leurs limites de domaine.",
+            "evidence_ids": [
+              "E5",
+              "E6",
+              "E8"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation",
+              "prompt_calibration"
+            ],
+            "depends_on": [
+              "T1",
+              "T2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [
+          "Piste par RQ : couverture forte et provenance simple.",
+          "Piste par thème : comparaison aisée, RQ moins visibles.",
+          "Piste par étude : traçabilité forte, synthèse fragmentée.",
+          "Retenir la piste par RQ avec discussion transversale."
+        ],
+        "explored_alternatives": [
+          "organisation par RQ",
+          "organisation par stratégie",
+          "organisation par risque"
+        ],
+        "llm_calls": 3
+      },
+      "metrics": {
+        "valid": true,
+        "plan_validity_rate": 1.0,
+        "rq_coverage": 1.0,
+        "section_coverage": 1.0,
+        "consistency": 1.0,
+        "errors": []
+      }
+    }
+  ],
+  "phase1": {
+    "direct": {
+      "variant": "classic",
+      "status": "abstained",
+      "plan": {
+        "strategy": "direct",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "S1",
+            "rq_id": "RQ1",
+            "objective": "Comparer les sensibilités observées.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S2",
+            "rq_id": "RQ2",
+            "objective": "Comparer gain de charge et risque d'erreur.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "S1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S3",
+            "rq_id": "RQ3",
+            "objective": "Présenter les mécanismes de contrôle et de validation, y compris la validation prospective.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation",
+              "prospective_validation"
+            ],
+            "depends_on": [
+              "S1",
+              "S2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "sections": [
+        {
+          "step_id": "S1",
+          "status": "success",
+          "content": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses, mais varie entre 58 % et 100 % au stade titre-résumé. La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité.",
+          "citations": [
+            "PMID38768452",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "high_recall",
+            "threshold_tradeoff"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "S2",
+          "status": "success",
+          "content": "La réduction simulée de charge varie entre 65 % et 85 %, avec très peu de fausses exclusions finales. La sensibilité parfaite réduit moins la charge ; une réduction proche de 94 % s'accompagne d'une sensibilité voisine de 0,94.",
+          "citations": [
+            "PMID40119675",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "recall_workload_tradeoff",
+            "workload_reduction"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        }
+      ],
+      "trace": [
+        {
+          "step_id": "S1",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S2",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S3",
+          "attempt": 1,
+          "decision": "abstain",
+          "reason": "Plan fixe : aucune révision autorisée.",
+          "missing_facets": [
+            "prospective_validation"
+          ]
+        }
+      ],
+      "revisions": 0,
+      "tool_calls": 3
+    },
+    "cot": {
+      "variant": "classic",
+      "status": "completed",
+      "plan": {
+        "strategy": "cot",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "C1",
+            "rq_id": "RQ3",
+            "objective": "Présenter d'abord les mécanismes de contrôle déjà étayés.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "C2",
+            "rq_id": "RQ1",
+            "objective": "Comparer ensuite les sensibilités.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [
+              "C1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "C3",
+            "rq_id": "RQ2",
+            "objective": "Terminer par le compromis opérationnel en rapprochant deux extractions de la même étude et une étude d'ensemble.",
+            "evidence_ids": [
+              "E2",
+              "E7",
+              "E4"
+            ],
+            "required_facets": [
+              "threshold_tradeoff",
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "C1",
+              "C2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [
+          "Organiser les preuves par RQ avant la rédaction.",
+          "Faire dépendre la comparaison des synthèses terminées."
+        ],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "sections": [
+        {
+          "step_id": "C1",
+          "status": "success",
+          "content": "La variation entre revues impose une validation locale et favorise un fonctionnement parallèle avec un reviewer humain. Le LLM est proposé comme second screener ; un prompt séparé par critère rend les décisions plus contrôlables.",
+          "citations": [
+            "PMID40119675",
+            "PMID40638273"
+          ],
+          "covered_facets": [
+            "domain_validation",
+            "human_oversight"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "C2",
+          "status": "success",
+          "content": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses, mais varie entre 58 % et 100 % au stade titre-résumé. La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité.",
+          "citations": [
+            "PMID38768452",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "high_recall",
+            "threshold_tradeoff"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "C3",
+          "status": "success",
+          "content": "La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité. La règle orientée rappel augmente la sensibilité mais diminue la spécificité : le gain de sécurité se paie par davantage de notices à vérifier. La sensibilité parfaite réduit moins la charge ; une réduction proche de 94 % s'accompagne d'une sensibilité voisine de 0,94.",
+          "citations": [
+            "PMID38768452",
+            "PMID40119675"
+          ],
+          "covered_facets": [
+            "recall_workload_tradeoff",
+            "threshold_tradeoff",
+            "workload_reduction"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        }
+      ],
+      "trace": [
+        {
+          "step_id": "C1",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "C2",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "C3",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "C3",
+          "attempt": 1,
+          "decision": "finish",
+          "reason": "Toutes les étapes sont terminées.",
+          "missing_facets": []
+        }
+      ],
+      "revisions": 0,
+      "tool_calls": 3
+    },
+    "tot": {
+      "variant": "classic",
+      "status": "completed",
+      "plan": {
+        "strategy": "tot",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "T1",
+            "rq_id": "RQ2",
+            "objective": "Commencer par le compromis décisionnel.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "T2",
+            "rq_id": "RQ1",
+            "objective": "Relier ce compromis aux performances.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "T3",
+            "rq_id": "RQ3",
+            "objective": "Conclure par les mécanismes de contrôle disponibles et leurs limites de domaine.",
+            "evidence_ids": [
+              "E5",
+              "E6",
+              "E8"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation",
+              "prompt_calibration"
+            ],
+            "depends_on": [
+              "T1",
+              "T2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [
+          "Piste par RQ : couverture forte et provenance simple.",
+          "Piste par thème : comparaison aisée, RQ moins visibles.",
+          "Piste par étude : traçabilité forte, synthèse fragmentée.",
+          "Retenir la piste par RQ avec discussion transversale."
+        ],
+        "explored_alternatives": [
+          "organisation par RQ",
+          "organisation par stratégie",
+          "organisation par risque"
+        ],
+        "llm_calls": 3
+      },
+      "sections": [
+        {
+          "step_id": "T1",
+          "status": "success",
+          "content": "La réduction simulée de charge varie entre 65 % et 85 %, avec très peu de fausses exclusions finales. La sensibilité parfaite réduit moins la charge ; une réduction proche de 94 % s'accompagne d'une sensibilité voisine de 0,94.",
+          "citations": [
+            "PMID40119675",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "recall_workload_tradeoff",
+            "workload_reduction"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "T2",
+          "status": "success",
+          "content": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses, mais varie entre 58 % et 100 % au stade titre-résumé. La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité.",
+          "citations": [
+            "PMID38768452",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "high_recall",
+            "threshold_tradeoff"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "T3",
+          "status": "success",
+          "content": "La variation entre revues impose une validation locale et favorise un fonctionnement parallèle avec un reviewer humain. Le LLM est proposé comme second screener ; un prompt séparé par critère rend les décisions plus contrôlables. La calibration du prompt est indispensable et doit être vérifiée sur le corpus local avant toute utilisation répétée.",
+          "citations": [
+            "PMID40119675",
+            "PMID40638273",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "domain_validation",
+            "human_oversight",
+            "prompt_calibration"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        }
+      ],
+      "trace": [
+        {
+          "step_id": "T1",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "T2",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "T3",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "T3",
+          "attempt": 1,
+          "decision": "finish",
+          "reason": "Toutes les étapes sont terminées.",
+          "missing_facets": []
+        }
+      ],
+      "revisions": 0,
+      "tool_calls": 3
+    }
+  },
+  "phase2": {
+    "classic": {
+      "variant": "classic",
+      "status": "abstained",
+      "plan": {
+        "strategy": "direct",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "S1",
+            "rq_id": "RQ1",
+            "objective": "Comparer les sensibilités observées.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S2",
+            "rq_id": "RQ2",
+            "objective": "Comparer gain de charge et risque d'erreur.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "S1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S3",
+            "rq_id": "RQ3",
+            "objective": "Présenter les mécanismes de contrôle et de validation, y compris la validation prospective.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation",
+              "prospective_validation"
+            ],
+            "depends_on": [
+              "S1",
+              "S2"
+            ],
+            "mode": "synthesis"
+          }
+        ],
+        "reasoning_summary": [],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "sections": [
+        {
+          "step_id": "S1",
+          "status": "success",
+          "content": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses, mais varie entre 58 % et 100 % au stade titre-résumé. La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité.",
+          "citations": [
+            "PMID38768452",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "high_recall",
+            "threshold_tradeoff"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "S2",
+          "status": "success",
+          "content": "La réduction simulée de charge varie entre 65 % et 85 %, avec très peu de fausses exclusions finales. La sensibilité parfaite réduit moins la charge ; une réduction proche de 94 % s'accompagne d'une sensibilité voisine de 0,94.",
+          "citations": [
+            "PMID40119675",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "recall_workload_tradeoff",
+            "workload_reduction"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        }
+      ],
+      "trace": [
+        {
+          "step_id": "S1",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S2",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S3",
+          "attempt": 1,
+          "decision": "retry",
+          "reason": "Réessayer sans modifier le plan.",
+          "missing_facets": [
+            "prospective_validation"
+          ]
+        },
+        {
+          "step_id": "S3",
+          "attempt": 2,
+          "decision": "abstain",
+          "reason": "Plan fixe : aucune révision autorisée.",
+          "missing_facets": [
+            "prospective_validation"
+          ]
+        }
+      ],
+      "revisions": 0,
+      "tool_calls": 4
+    },
+    "replanning": {
+      "variant": "replanning",
+      "status": "completed",
+      "plan": {
+        "strategy": "direct",
+        "objective": "Produire une note pedagogique couvrant RQ1, RQ2 et RQ3.",
+        "steps": [
+          {
+            "id": "S1",
+            "rq_id": "RQ1",
+            "objective": "Comparer les sensibilités observées.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "required_facets": [
+              "high_recall",
+              "threshold_tradeoff"
+            ],
+            "depends_on": [],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S2",
+            "rq_id": "RQ2",
+            "objective": "Comparer gain de charge et risque d'erreur.",
+            "evidence_ids": [
+              "E3",
+              "E4"
+            ],
+            "required_facets": [
+              "workload_reduction",
+              "recall_workload_tradeoff"
+            ],
+            "depends_on": [
+              "S1"
+            ],
+            "mode": "synthesis"
+          },
+          {
+            "id": "S3",
+            "rq_id": "RQ3",
+            "objective": "Synthétiser les mécanismes de contrôle étayés et signaler explicitement l'absence de validation prospective.",
+            "evidence_ids": [
+              "E5",
+              "E6"
+            ],
+            "required_facets": [
+              "human_oversight",
+              "domain_validation"
+            ],
+            "depends_on": [
+              "S1",
+              "S2"
+            ],
+            "mode": "limitation"
+          }
+        ],
+        "reasoning_summary": [],
+        "explored_alternatives": [],
+        "llm_calls": 1
+      },
+      "sections": [
+        {
+          "step_id": "S1",
+          "status": "success",
+          "content": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses, mais varie entre 58 % et 100 % au stade titre-résumé. La règle équilibrée obtient 81,1 % à 96,5 % de sensibilité ; la règle orientée rappel atteint 94,6 % à 99,8 % mais réduit la spécificité.",
+          "citations": [
+            "PMID38768452",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "high_recall",
+            "threshold_tradeoff"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "S2",
+          "status": "success",
+          "content": "La réduction simulée de charge varie entre 65 % et 85 %, avec très peu de fausses exclusions finales. La sensibilité parfaite réduit moins la charge ; une réduction proche de 94 % s'accompagne d'une sensibilité voisine de 0,94.",
+          "citations": [
+            "PMID40119675",
+            "PMID40701625"
+          ],
+          "covered_facets": [
+            "recall_workload_tradeoff",
+            "workload_reduction"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        },
+        {
+          "step_id": "S3",
+          "status": "success",
+          "content": "La variation entre revues impose une validation locale et favorise un fonctionnement parallèle avec un reviewer humain. Le LLM est proposé comme second screener ; un prompt séparé par critère rend les décisions plus contrôlables. Limite scientifique explicitée par le plan révisé : Synthétiser les mécanismes de contrôle étayés et signaler explicitement l'absence de validation prospective.",
+          "citations": [
+            "PMID40119675",
+            "PMID40638273"
+          ],
+          "covered_facets": [
+            "domain_validation",
+            "human_oversight"
+          ],
+          "missing_facets": [],
+          "tool_calls": 1
+        }
+      ],
+      "trace": [
+        {
+          "step_id": "S1",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S2",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S3",
+          "attempt": 1,
+          "decision": "replan",
+          "reason": "Plan restant inadapté.",
+          "missing_facets": [
+            "prospective_validation"
+          ]
+        },
+        {
+          "step_id": "S3",
+          "attempt": 1,
+          "decision": "continue",
+          "reason": "Étape conforme.",
+          "missing_facets": []
+        },
+        {
+          "step_id": "S3",
+          "attempt": 1,
+          "decision": "finish",
+          "reason": "Plan révisé exécuté.",
+          "missing_facets": []
+        }
+      ],
+      "revisions": 1,
+      "tool_calls": 4
+    }
+  }
+}

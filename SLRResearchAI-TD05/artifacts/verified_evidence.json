@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "origin": "RAG_TD05",
+  "source_artifacts": [
+    "search_results.json",
+    "screening_decisions.json",
+    "document_manifest.json"
+  ],
+  "evidence": [
+    {
+      "answer": "Le rappel est de 0,82 pour input-output, 0,97 pour zero-shot chain of thought et 1,0 pour few-shot chain of thought et majority voting.",
+      "supporting_quote": "Recall was 0.82 for input-output, 0.97 for zero-shot chain of thought, and 1.0 for few-shot chain of thought and majority voting.",
+      "paper_id": "W4402635906",
+      "chunk_id": "W4402635906_p2_c1",
+      "page": 2,
+      "status": "verified",
+      "verification_reason": "Citation exacte et provenance cohérente."
+    }
+  ]
+}
