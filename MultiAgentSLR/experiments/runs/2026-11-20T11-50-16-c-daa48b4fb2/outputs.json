@@ -1,0 +1,187 @@
+{
+  "Q1": {
+    "classical": {
+      "rq_id": "Q1",
+      "method": "tf-idf",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 0,
+      "facet_coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "recall_values"
+      ],
+      "ranks": [],
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "elapsed_seconds": 0.00025309999978162523,
+      "trace": []
+    },
+    "agentic": {
+      "rq_id": "Q1",
+      "method": "tf-idf + adaptive lexical",
+      "status": "budget_exhausted",
+      "retrieval_calls": 2,
+      "selected": 1,
+      "facet_coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "recall_values"
+      ],
+      "ranks": [
+        "W4410000915_p1_c1"
+      ],
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "elapsed_seconds": 0.0002670999999736523,
+      "trace": [
+        {
+          "iteration": 1,
+          "action": "retrieve",
+          "tool": "lexical",
+          "query": "Quels niveaux de rappel sont rapportés selon les stratégies ?",
+          "found": 0,
+          "covered_facets": [],
+          "missing_facets": [
+            "recall_values"
+          ],
+          "reason": "Commencer par la baseline lexicale."
+        },
+        {
+          "iteration": 2,
+          "action": "retrieve",
+          "tool": "lexical",
+          "query": "recall values prompting strategies",
+          "found": 1,
+          "covered_facets": [],
+          "missing_facets": [
+            "recall_values"
+          ],
+          "reason": "Refine lexical search using the missing facet hints."
+        }
+      ]
+    }
+  },
+  "Q2": {
+    "classical": {
+      "rq_id": "Q2",
+      "method": "tf-idf",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 0,
+      "facet_coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "human_oversight"
+      ],
+      "ranks": [],
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "elapsed_seconds": 0.00016540000001441513,
+      "trace": []
+    },
+    "agentic": {
+      "rq_id": "Q2",
+      "method": "tf-idf + adaptive lexical",
+      "status": "completed",
+      "retrieval_calls": 2,
+      "selected": 1,
+      "facet_coverage": 1.0,
+      "covered": [
+        "human_oversight"
+      ],
+      "missing": [],
+      "ranks": [
+        "W4410000915_p2_c1"
+      ],
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "elapsed_seconds": 0.0002493999998023355,
+      "trace": [
+        {
+          "iteration": 1,
+          "action": "retrieve",
+          "tool": "lexical",
+          "query": "Pourquoi une supervision humaine reste-t-elle nécessaire ?",
+          "found": 0,
+          "covered_facets": [],
+          "missing_facets": [
+            "human_oversight"
+          ],
+          "reason": "Commencer par la baseline lexicale."
+        },
+        {
+          "iteration": 2,
+          "action": "retrieve",
+          "tool": "lexical",
+          "query": "human oversight quality control reproducibility",
+          "found": 1,
+          "covered_facets": [
+            "human_oversight"
+          ],
+          "missing_facets": [],
+          "reason": "Refine lexical search using the missing facet hints."
+        }
+      ]
+    }
+  },
+  "Q3": {
+    "classical": {
+      "rq_id": "Q3",
+      "method": "tf-idf",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 1,
+      "facet_coverage": 1.0,
+      "covered": [
+        "input_output",
+        "chain_of_thought",
+        "majority_voting"
+      ],
+      "missing": [],
+      "ranks": [
+        "W4402635906_p1_c1"
+      ],
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "elapsed_seconds": 9.079999995265098e-05,
+      "trace": []
+    },
+    "agentic": {
+      "rq_id": "Q3",
+      "method": "tf-idf + adaptive lexical",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 1,
+      "facet_coverage": 1.0,
+      "covered": [
+        "input_output",
+        "chain_of_thought",
+        "majority_voting"
+      ],
+      "missing": [],
+      "ranks": [
+        "W4402635906_p1_c1"
+      ],
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "elapsed_seconds": 9.799999997994746e-05,
+      "trace": [
+        {
+          "iteration": 1,
+          "action": "retrieve",
+          "tool": "lexical",
+          "query": "Quelles stratégies de prompting ont été comparées ?",
+          "found": 1,
+          "covered_facets": [
+            "input_output",
+            "chain_of_thought",
+            "majority_voting"
+          ],
+          "missing_facets": [],
+          "reason": "Commencer par la baseline lexicale."
+        }
+      ]
+    }
+  }
+}

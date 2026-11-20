@@ -1,0 +1,73 @@
+{
+  "id": "1f1beac747e64169b1f4859976491986",
+  "config": {
+    "topic": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+    "provider": "ollama",
+    "per_source": 1,
+    "search": "react",
+    "screen": "llm",
+    "retrieval": "agentic",
+    "orchestration": "supervisor",
+    "top_k": 3,
+    "retrieval_budget": 2,
+    "revision_budget": 1,
+    "pause_for_documents": false,
+    "inclusion": "Include primary empirical studies evaluating large language models for title or abstract screening in systematic literature reviews.",
+    "exclusion": "Exclude narrative reviews and studies about unrelated screening or tasks outside systematic literature reviews."
+  },
+  "status": "failed",
+  "next_stage": "planning",
+  "created": "2026-11-20T11:53:27.333376+00:00",
+  "updated": "2026-11-20T11:53:52.867247+00:00",
+  "version": 2,
+  "revision": 0,
+  "error": "planning: ValidationError",
+  "plan": null,
+  "search": null,
+  "screening": null,
+  "full_text": {},
+  "rag": null,
+  "draft": null,
+  "quality": [],
+  "adjudications": [],
+  "events": [
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/invoke",
+      "status": "ok",
+      "seconds": 7.250624000000016,
+      "input_tokens": 313,
+      "output_tokens": 171,
+      "retry": false,
+      "detail": "",
+      "timestamp": "2026-11-20T11:53:35.077262+00:00"
+    },
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/ProtocolProposal",
+      "status": "ok",
+      "seconds": 17.78585639999983,
+      "input_tokens": 389,
+      "output_tokens": 641,
+      "retry": false,
+      "detail": "",
+      "timestamp": "2026-11-20T11:53:52.866735+00:00"
+    },
+    {
+      "stage": "planning",
+      "kind": "agent",
+      "operation": "planning",
+      "status": "error",
+      "seconds": 25.370112500000005,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "ValidationError",
+      "timestamp": "2026-11-20T11:53:52.867247+00:00"
+    }
+  ],
+  "handoffs": [],
+  "feedback": []
+}

@@ -1,0 +1,35 @@
+services:
+  app:
+    build:
+      context: .
+      target: app
+    ports:
+      - "127.0.0.1:${SLR_HOST_PORT:-8501}:8501"
+    environment:
+      PORT: 8501
+      SLR_DATA_DIR: /app/data
+      SLR_EXPERIMENT_DIR: /app/data/experiments
+      LLM_PROVIDER: "${LLM_PROVIDER:-ollama}"
+      OLLAMA_BASE_URL: "${OLLAMA_BASE_URL:-http://host.docker.internal:11434}"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:7b}"
+      OLLAMA_EMBEDDING_MODEL: "${OLLAMA_EMBEDDING_MODEL:-}"
+      GROQ_MODEL: "${GROQ_MODEL:-openai/gpt-oss-20b}"
+      GROQ_API_KEY: "${GROQ_API_KEY:-}"
+      OPENALEX_API_KEY: "${OPENALEX_API_KEY:-}"
+      SEMANTIC_SCHOLAR_API_KEY: "${SEMANTIC_SCHOLAR_API_KEY:-}"
+      CROSSREF_EMAIL: "${CROSSREF_EMAIL:-}"
+      SLR_ACCESS_TOKEN: "${SLR_ACCESS_TOKEN:-}"
+      SLR_CACHE_TTL_SECONDS: "${SLR_CACHE_TTL_SECONDS:-86400}"
+      SLR_REQUEST_TIMEOUT_SECONDS: "${SLR_REQUEST_TIMEOUT_SECONDS:-25}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - review_data:/app/data
+    restart: unless-stopped
+  tests:
+    profiles: ["tests"]
+    build:
+      context: .
+      target: tests
+volumes:
+  review_data:

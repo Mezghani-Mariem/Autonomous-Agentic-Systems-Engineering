@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: multi-agent-slr
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /_stcore/health
+    numInstances: 1
+    disk:
+      name: slr-data
+      mountPath: /app/data
+      sizeGB: 2
+    envVars:
+      - key: LLM_PROVIDER
+        value: groq
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+      - key: GROQ_API_KEY
+        sync: false
+      - key: SLR_ACCESS_TOKEN
+        sync: false
+      - key: OPENALEX_API_KEY
+        sync: false
+      - key: SEMANTIC_SCHOLAR_API_KEY
+        sync: false
+      - key: CROSSREF_EMAIL
+        sync: false
+      - key: SLR_DATA_DIR
+        value: /app/data
+      - key: SLR_EXPERIMENT_DIR
+        value: /app/data/experiments

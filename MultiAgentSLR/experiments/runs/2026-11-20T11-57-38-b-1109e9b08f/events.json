@@ -1,0 +1,110 @@
+[
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 8.944830799999863,
+    "input_tokens": 430,
+    "output_tokens": 214,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:57:48.128359+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 6.004204400000162,
+    "input_tokens": 802,
+    "output_tokens": 196,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:57:54.133647+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.670383700000002,
+    "input_tokens": 635,
+    "output_tokens": 151,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:57:58.806096+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.493362700000034,
+    "input_tokens": 558,
+    "output_tokens": 147,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:03.300116+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.9795217999999295,
+    "input_tokens": 599,
+    "output_tokens": 163,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:08.281088+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 5.538213900000073,
+    "input_tokens": 805,
+    "output_tokens": 171,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:13.820210+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.8731123999998545,
+    "input_tokens": 735,
+    "output_tokens": 149,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:18.694812+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.600483299999951,
+    "input_tokens": 765,
+    "output_tokens": 145,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:23.297563+00:00"
+  },
+  {
+    "stage": "screening",
+    "kind": "llm",
+    "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+    "status": "ok",
+    "seconds": 4.7166480000000774,
+    "input_tokens": 707,
+    "output_tokens": 148,
+    "retry": false,
+    "detail": "",
+    "timestamp": "2026-11-20T11:58:28.017703+00:00"
+  }
+]

@@ -1,0 +1,288 @@
+{
+  "rules": {
+    "decisions": [
+      {
+        "paper_id": "P-b0677f2324b8282d",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-90aec09c1292ae22",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-d71065aa4b4928ca",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-49831e8e3a286f1b",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-8cd2fa2094e1fdef",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-5e8fa8d1ab83a6eb",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-837074fa7a349264",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-36ef4fd0259507ae",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-467c8a257916fffe",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-3c48f7f5908e8c1e",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : slr Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-104be99f71c8dee0",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-93520b22424d212a",
+        "rule": "uncertain",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-9fc197cc8a0955a7",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-b95430cdb6699252",
+        "rule": "include",
+        "llm": null,
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "Critère d'inclusion détecté : screening Critère d'inclusion détecté : systematic review",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-bb51de95272170dc",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      }
+    ],
+    "raw_decision_metrics": null,
+    "automatic_policy_metrics": null,
+    "assessed_predictions": 14,
+    "pending": 6
+  },
+  "llm": {
+    "decisions": [
+      {
+        "paper_id": "P-b0677f2324b8282d",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-90aec09c1292ae22",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-d71065aa4b4928ca",
+        "rule": "include",
+        "llm": "uncertain",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Large Language Models in Systematic Review Screening: Opportunities, Challenges, and Methodological Considerations LLMs have recently emerged as a powerful option for partially automating the labor-intensive process of screening articles in systematic reviews. The paper offers a step-by-step methodology for researchers, librarians, and students seeking to incorporate LLMs—such as GPT-4—into systematic reviews. Contrôle local : Preuve LLM absente du titre et du résumé",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-49831e8e3a286f1b",
+        "rule": "include",
+        "llm": "uncertain",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "The study focuses on the use of large language models (LLMs) for screening relevant studies in a systematic review, which aligns with the inclusion criteria. It explores the potential capabilities of LLMs such as ChatGPT for selecting relevant studies, directly addressing the topic of interest. The research involves comparing different strategies and evaluating their performance using recall, F-score, and precision measures, providing quantitative evidence. Contrôle local : Preuve LLM absente du titre et du résumé",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-8cd2fa2094e1fdef",
+        "rule": "include",
+        "llm": "include",
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "The study compares human and LLM title-and-abstract screening workflows, which is relevant to the topic of using large language models for screening in systematic literature reviews. It evaluates the performance of different configurations of LLMs and discusses their trade-offs with human screening methods.",
+        "quote": "Evaluating human and LLM screening workflows in a conceptually complex scoping review: Recall--workload trade-offs and run-to-run consistency"
+      },
+      {
+        "paper_id": "P-5e8fa8d1ab83a6eb",
+        "rule": "include",
+        "llm": "include",
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "The study focuses on the use of large language models for title-and-abstract screening in systematic reviews, which is directly relevant to the topic. It evaluates a method that could reduce the labor-intensive nature of this phase, aligning with the primary research focus.",
+        "quote": "Using full agreement across multiple large language models for title-and-abstract screening in systematic reviews: a proof-of-concept"
+      },
+      {
+        "paper_id": "P-837074fa7a349264",
+        "rule": "include",
+        "llm": "include",
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "The paper evaluates the use of GPT for title and abstract screening in a systematic literature review, which aligns with the inclusion criteria. It provides specific performance metrics relevant to the topic, such as recall rates and time savings compared to manual screening.",
+        "quote": "In this paper we show that OpenAI's Large Language Model (LLM) GPT perform remarkably well when used for title and abstract eligibility screening of scientific articles and within a (systematic) literature review workflow."
+      },
+      {
+        "paper_id": "P-36ef4fd0259507ae",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-467c8a257916fffe",
+        "rule": "include",
+        "llm": "include",
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "The study evaluates a non-generative model (Jev) for screening titles and abstracts in systematic reviews, which is relevant to the topic of large language models for title and abstract screening. It compares Jev with other LLMs on specific datasets related to bipolar disorder treatments, providing quantitative results that could be useful for assessing the performance of such models.",
+        "quote": "Title and abstract screening for systematic reviews with Jev, a System One model: comparison with generative large language models"
+      },
+      {
+        "paper_id": "P-3c48f7f5908e8c1e",
+        "rule": "include",
+        "llm": "uncertain",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "The study focuses on the validation of generative AI models for title and abstract screening in systematic reviews, which aligns with the inclusion criteria. It evaluates the performance of these models using metrics such as accuracy, sensitivity, specificity, and precision, providing a comprehensive assessment relevant to the topic. Contrôle local : Preuve LLM absente du titre et du résumé",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-104be99f71c8dee0",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-93520b22424d212a",
+        "rule": "uncertain",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-9fc197cc8a0955a7",
+        "rule": "include",
+        "llm": "include",
+        "final": "include",
+        "decided_by": "automatic",
+        "reason": "The study focuses on the use of large language models for title and abstract screening in systematic literature reviews, which aligns with the scope of the SLR. It evaluates the performance of different LLMs in this context, providing relevant data for the topic.",
+        "quote": "Title and abstract screening for literature reviews using large language models: an exploratory study in the biomedical domain"
+      },
+      {
+        "paper_id": "P-b95430cdb6699252",
+        "rule": "include",
+        "llm": "uncertain",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "The study compares supervised machine learning and large language models for title-abstract screening, which is relevant to the topic of automating systematic literature review screening. It evaluates performance metrics such as recall, specificity, precision, F1-score, and accuracy, providing a comprehensive analysis that could be useful in determining the feasibility of these methods. Contrôle local : Preuve LLM absente du titre et du résumé",
+        "quote": ""
+      },
+      {
+        "paper_id": "P-bb51de95272170dc",
+        "rule": "include",
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. Assess the title or supply and review the full text.",
+        "quote": ""
+      }
+    ],
+    "raw_decision_metrics": null,
+    "automatic_policy_metrics": null,
+    "assessed_predictions": 5,
+    "pending": 10
+  }
+}

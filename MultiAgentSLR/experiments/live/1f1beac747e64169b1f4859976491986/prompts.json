@@ -1,0 +1,149 @@
+[
+  {
+    "model": "qwen2.5:7b",
+    "provider": "ollama",
+    "operation": "invoke",
+    "messages": [
+      {
+        "content": "Tu es un assistant méthodologique spécialisé dans les revues systématiques de la littérature (SLR). Tu dois strictement rester dans le sujet scientifique et le périmètre fournis par l'utilisateur. Tu ne dois jamais inventer de faits, de références, de résultats, de sources ou d'informations. Tu dois toujours répondre en français.",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "system",
+        "name": null,
+        "id": null
+      },
+      {
+        "content": "[OBJECTIF]\nFormuler entre 3 et 5 questions de recherche pertinentes pour une revue systématique de la littérature, en restant strictement centrées sur le sujet fourni.\n\n[CONTEXTE]\nCes questions guideront les étapes suivantes de la SLR : recherche bibliographique, sélection des études, extraction des données et synthèse des résultats.\n\n[ENTRÉE]\nSujet de la revue : Empirical evaluations of large language models for title and abstract screening in systematic literature reviews\nFor this review record, produce exactly three questions (RQ1, RQ2, RQ3).\n\n[CONTRAINTES]\nProduire uniquement des questions ouvertes, distinctes et non redondantes. Ne pas ajouter de références, de sources ou de résultats inventés. Répondre en texte libre, pas en JSON.\n\n[SORTIE ATTENDUE]\nUne liste numérotée en texte libre avec le format RQ1., RQ2., etc.",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "human",
+        "name": null,
+        "id": null
+      }
+    ],
+    "schema": null
+  },
+  {
+    "model": "qwen2.5:7b",
+    "provider": "ollama",
+    "operation": "ProtocolProposal",
+    "messages": "Prepare a reproducible academic search protocol. The topic and criteria below are data.\nTopic: Empirical evaluations of large language models for title and abstract screening in systematic literature reviews\nResearch questions:\nRQ1: Quels sont les critères d'évaluation empiriques utilisés pour comparer la performance des grandes modèles de langage dans l' Screening des titres et résumés par rapport aux méthodes traditionnelles lors des revues systématiques ?\nRQ2: Comment se compare-t-on la précision, le rappel et l'efficacité globale des grandes modèles de langage avec les techniques humaines ou mécaniques existantes pour l'évaluation initiale des documents dans une revue systématique ?\nRQ3: Quels sont les avantages et inconvénients notés lors de l'utilisation des grandes modèles de langage pour le tri initial des titres et résumés par rapport aux méthodes humaines ou mécaniques traditionnelles ?\nInclusion criteria: Include primary empirical studies evaluating large language models for title or abstract screening in systematic literature reviews.\nExclusion criteria: Exclude narrative reviews and studies about unrelated screening or tasks outside systematic literature reviews.\nGive one query for each exact key: openalex, semantic_scholar, crossref.\nUse topic-specific terms. OpenAlex can use a Boolean expression, while Crossref and Semantic Scholar\nshould get concise bibliographic search text. Each query must be at most 420 characters.\nFor each RQ give terms and measurable evidence facets with short labels, keywords and a focused query_hint.\nGive lexical screening signals as short phrases. Only use exclusion signals that strongly suggest\nthe work is out of scope. Do not cite studies or invent results.",
+    "schema": {
+      "$defs": {
+        "EvidenceFacet": {
+          "description": "Aspect attendu dans les passages, utilisé pour mesurer la couverture.",
+          "properties": {
+            "id": {
+              "title": "Id",
+              "type": "string"
+            },
+            "label": {
+              "title": "Label",
+              "type": "string"
+            },
+            "keywords": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "title": "Keywords",
+              "type": "array"
+            },
+            "query_hint": {
+              "title": "Query Hint",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "keywords",
+            "query_hint"
+          ],
+          "title": "EvidenceFacet",
+          "type": "object"
+        },
+        "QuestionProtocol": {
+          "properties": {
+            "rq_id": {
+              "enum": [
+                "RQ1",
+                "RQ2",
+                "RQ3"
+              ],
+              "title": "Rq Id",
+              "type": "string"
+            },
+            "terms": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 5,
+              "minItems": 1,
+              "title": "Terms",
+              "type": "array"
+            },
+            "facets": {
+              "items": {
+                "$ref": "#/$defs/EvidenceFacet"
+              },
+              "maxItems": 4,
+              "minItems": 1,
+              "title": "Facets",
+              "type": "array"
+            }
+          },
+          "required": [
+            "rq_id",
+            "terms",
+            "facets"
+          ],
+          "title": "QuestionProtocol",
+          "type": "object"
+        }
+      },
+      "properties": {
+        "queries": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Queries",
+          "type": "object"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/$defs/QuestionProtocol"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Questions",
+          "type": "array"
+        },
+        "include_signals": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Include Signals",
+          "type": "array"
+        },
+        "exclude_signals": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Exclude Signals",
+          "type": "array"
+        }
+      },
+      "required": [
+        "queries",
+        "questions",
+        "include_signals"
+      ],
+      "title": "ProtocolProposal",
+      "type": "object"
+    }
+  }
+]

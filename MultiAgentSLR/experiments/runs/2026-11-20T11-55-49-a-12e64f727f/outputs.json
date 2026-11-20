@@ -1,0 +1,602 @@
+{
+  "fixed": {
+    "discovered": 3,
+    "unique": 3,
+    "duplicates": 0,
+    "tool_order": [
+      "openalex",
+      "semantic_scholar",
+      "crossref"
+    ],
+    "tool_statuses": [
+      "rate_limited",
+      "success",
+      "success"
+    ],
+    "state": {
+      "origin": "search",
+      "papers": [
+        {
+          "id": "P-5e61f638804c644d",
+          "title": "Generative AI for title and abstract screening",
+          "abstract": "Evaluation of recall in software engineering reviews.",
+          "doi": "10.1000/slr.003",
+          "url": "https://doi.org/10.1000/slr.003",
+          "authors": [],
+          "year": null,
+          "abstract_source": "semantic_scholar",
+          "sources": [
+            {
+              "source": "semantic_scholar",
+              "native_id": "SS-01",
+              "title": "Generative AI for title and abstract screening",
+              "abstract": "Evaluation of recall in software engineering reviews.",
+              "doi": "10.1000/slr.003",
+              "url": "https://example.org/ss-01",
+              "authors": [],
+              "year": null,
+              "open_access": true
+            }
+          ]
+        },
+        {
+          "id": "P-def0e5bc75c1e143",
+          "title": "Large language models for systematic review screening",
+          "abstract": "The same article indexed by a second source.",
+          "doi": "10.1000/slr.001",
+          "url": "https://doi.org/10.1000/slr.001",
+          "authors": [],
+          "year": null,
+          "abstract_source": "crossref",
+          "sources": [
+            {
+              "source": "crossref",
+              "native_id": "CR-01",
+              "title": "Large language models for systematic review screening",
+              "abstract": "The same article indexed by a second source.",
+              "doi": "10.1000/slr.001",
+              "url": "https://example.org/cr-01",
+              "authors": [],
+              "year": null,
+              "open_access": true
+            }
+          ]
+        },
+        {
+          "id": "P-65c0760b91f658c3",
+          "title": "Human oversight of AI-assisted study selection",
+          "abstract": "Uncertainty and human validation remain necessary.",
+          "doi": "10.1000/slr.002",
+          "url": "https://doi.org/10.1000/slr.002",
+          "authors": [],
+          "year": null,
+          "abstract_source": "crossref",
+          "sources": [
+            {
+              "source": "crossref",
+              "native_id": "CR-02",
+              "title": "Human oversight of AI-assisted study selection",
+              "abstract": "Uncertainty and human validation remain necessary.",
+              "doi": "10.1000/slr.002",
+              "url": "https://example.org/cr-02",
+              "authors": [],
+              "year": null,
+              "open_access": false
+            }
+          ]
+        }
+      ],
+      "discovered": 3,
+      "duplicates": 0,
+      "state": {
+        "objective": "Large language models for title and abstract screening in systematic literature reviews",
+        "queries": {
+          "openalex": "systematic review screening",
+          "semantic_scholar": "systematic review screening",
+          "crossref": "systematic review screening"
+        },
+        "papers": [
+          {
+            "id": "SS-01",
+            "title": "Generative AI for title and abstract screening",
+            "abstract": "Evaluation of recall in software engineering reviews.",
+            "doi": "10.1000/slr.003",
+            "source": "semantic_scholar",
+            "url": "https://example.org/ss-01",
+            "open_access": true
+          },
+          {
+            "id": "CR-01",
+            "title": "Large language models for systematic review screening",
+            "abstract": "The same article indexed by a second source.",
+            "doi": "10.1000/slr.001",
+            "source": "crossref",
+            "url": "https://example.org/cr-01",
+            "open_access": true
+          },
+          {
+            "id": "CR-02",
+            "title": "Human oversight of AI-assisted study selection",
+            "abstract": "Uncertainty and human validation remain necessary.",
+            "doi": "10.1000/slr.002",
+            "source": "crossref",
+            "url": "https://example.org/cr-02",
+            "open_access": false
+          }
+        ],
+        "actions_executed": [
+          {
+            "action": "search",
+            "tool": "openalex",
+            "query": "systematic review screening",
+            "limit": 2
+          },
+          {
+            "action": "search",
+            "tool": "semantic_scholar",
+            "query": "systematic review screening",
+            "limit": 2
+          },
+          {
+            "action": "search",
+            "tool": "crossref",
+            "query": "systematic review screening",
+            "limit": 2
+          }
+        ],
+        "observations": [
+          {
+            "tool": "openalex",
+            "status": "rate_limited",
+            "count": 0,
+            "latency_seconds": 0.00020959999983460875,
+            "error": "HTTP 429",
+            "papers": [],
+            "raw_action": null
+          },
+          {
+            "tool": "semantic_scholar",
+            "status": "success",
+            "count": 1,
+            "latency_seconds": 1.1200000017197453e-05,
+            "error": null,
+            "papers": [
+              {
+                "id": "SS-01",
+                "title": "Generative AI for title and abstract screening",
+                "abstract": "Evaluation of recall in software engineering reviews.",
+                "doi": "10.1000/slr.003",
+                "source": "semantic_scholar",
+                "url": "https://example.org/ss-01",
+                "open_access": true
+              }
+            ],
+            "raw_action": null
+          },
+          {
+            "tool": "crossref",
+            "status": "success",
+            "count": 2,
+            "latency_seconds": 1.0099999826707062e-05,
+            "error": null,
+            "papers": [
+              {
+                "id": "CR-01",
+                "title": "Large language models for systematic review screening",
+                "abstract": "The same article indexed by a second source.",
+                "doi": "10.1000/slr.001",
+                "source": "crossref",
+                "url": "https://example.org/cr-01",
+                "open_access": true
+              },
+              {
+                "id": "CR-02",
+                "title": "Human oversight of AI-assisted study selection",
+                "abstract": "Uncertainty and human validation remain necessary.",
+                "doi": "10.1000/slr.002",
+                "source": "crossref",
+                "url": "https://example.org/cr-02",
+                "open_access": false
+              }
+            ],
+            "raw_action": null
+          }
+        ],
+        "trace": [
+          {
+            "step": 1,
+            "action": {
+              "action": "search",
+              "tool": "openalex",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "openalex",
+              "status": "rate_limited",
+              "count": 0,
+              "latency_seconds": 0.00020959999983460875,
+              "error": "HTTP 429",
+              "papers": [],
+              "raw_action": null
+            }
+          },
+          {
+            "step": 2,
+            "action": {
+              "action": "search",
+              "tool": "semantic_scholar",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "semantic_scholar",
+              "status": "success",
+              "count": 1,
+              "latency_seconds": 1.1200000017197453e-05,
+              "error": null,
+              "papers": [
+                {
+                  "id": "SS-01",
+                  "title": "Generative AI for title and abstract screening",
+                  "abstract": "Evaluation of recall in software engineering reviews.",
+                  "doi": "10.1000/slr.003",
+                  "source": "semantic_scholar",
+                  "url": "https://example.org/ss-01",
+                  "open_access": true
+                }
+              ],
+              "raw_action": null
+            }
+          },
+          {
+            "step": 3,
+            "action": {
+              "action": "search",
+              "tool": "crossref",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "crossref",
+              "status": "success",
+              "count": 2,
+              "latency_seconds": 1.0099999826707062e-05,
+              "error": null,
+              "papers": [
+                {
+                  "id": "CR-01",
+                  "title": "Large language models for systematic review screening",
+                  "abstract": "The same article indexed by a second source.",
+                  "doi": "10.1000/slr.001",
+                  "source": "crossref",
+                  "url": "https://example.org/cr-01",
+                  "open_access": true
+                },
+                {
+                  "id": "CR-02",
+                  "title": "Human oversight of AI-assisted study selection",
+                  "abstract": "Uncertainty and human validation remain necessary.",
+                  "doi": "10.1000/slr.002",
+                  "source": "crossref",
+                  "url": "https://example.org/cr-02",
+                  "open_access": false
+                }
+              ],
+              "raw_action": null
+            }
+          }
+        ],
+        "errors": [
+          "HTTP 429"
+        ],
+        "step": 3,
+        "finished": true,
+        "stop_reason": "workflow_complete"
+      }
+    }
+  },
+  "react": {
+    "discovered": 3,
+    "unique": 3,
+    "duplicates": 0,
+    "tool_order": [
+      "openalex",
+      "crossref",
+      "semantic_scholar"
+    ],
+    "tool_statuses": [
+      "rate_limited",
+      "success",
+      "success"
+    ],
+    "state": {
+      "origin": "search",
+      "papers": [
+        {
+          "id": "P-def0e5bc75c1e143",
+          "title": "Large language models for systematic review screening",
+          "abstract": "The same article indexed by a second source.",
+          "doi": "10.1000/slr.001",
+          "url": "https://doi.org/10.1000/slr.001",
+          "authors": [],
+          "year": null,
+          "abstract_source": "crossref",
+          "sources": [
+            {
+              "source": "crossref",
+              "native_id": "CR-01",
+              "title": "Large language models for systematic review screening",
+              "abstract": "The same article indexed by a second source.",
+              "doi": "10.1000/slr.001",
+              "url": "https://example.org/cr-01",
+              "authors": [],
+              "year": null,
+              "open_access": true
+            }
+          ]
+        },
+        {
+          "id": "P-65c0760b91f658c3",
+          "title": "Human oversight of AI-assisted study selection",
+          "abstract": "Uncertainty and human validation remain necessary.",
+          "doi": "10.1000/slr.002",
+          "url": "https://doi.org/10.1000/slr.002",
+          "authors": [],
+          "year": null,
+          "abstract_source": "crossref",
+          "sources": [
+            {
+              "source": "crossref",
+              "native_id": "CR-02",
+              "title": "Human oversight of AI-assisted study selection",
+              "abstract": "Uncertainty and human validation remain necessary.",
+              "doi": "10.1000/slr.002",
+              "url": "https://example.org/cr-02",
+              "authors": [],
+              "year": null,
+              "open_access": false
+            }
+          ]
+        },
+        {
+          "id": "P-5e61f638804c644d",
+          "title": "Generative AI for title and abstract screening",
+          "abstract": "Evaluation of recall in software engineering reviews.",
+          "doi": "10.1000/slr.003",
+          "url": "https://doi.org/10.1000/slr.003",
+          "authors": [],
+          "year": null,
+          "abstract_source": "semantic_scholar",
+          "sources": [
+            {
+              "source": "semantic_scholar",
+              "native_id": "SS-01",
+              "title": "Generative AI for title and abstract screening",
+              "abstract": "Evaluation of recall in software engineering reviews.",
+              "doi": "10.1000/slr.003",
+              "url": "https://example.org/ss-01",
+              "authors": [],
+              "year": null,
+              "open_access": true
+            }
+          ]
+        }
+      ],
+      "discovered": 3,
+      "duplicates": 0,
+      "state": {
+        "objective": "Large language models for title and abstract screening in systematic literature reviews",
+        "queries": {
+          "openalex": "systematic review screening",
+          "semantic_scholar": "systematic review screening",
+          "crossref": "systematic review screening"
+        },
+        "papers": [
+          {
+            "id": "CR-01",
+            "title": "Large language models for systematic review screening",
+            "abstract": "The same article indexed by a second source.",
+            "doi": "10.1000/slr.001",
+            "source": "crossref",
+            "url": "https://example.org/cr-01",
+            "open_access": true
+          },
+          {
+            "id": "CR-02",
+            "title": "Human oversight of AI-assisted study selection",
+            "abstract": "Uncertainty and human validation remain necessary.",
+            "doi": "10.1000/slr.002",
+            "source": "crossref",
+            "url": "https://example.org/cr-02",
+            "open_access": false
+          },
+          {
+            "id": "SS-01",
+            "title": "Generative AI for title and abstract screening",
+            "abstract": "Evaluation of recall in software engineering reviews.",
+            "doi": "10.1000/slr.003",
+            "source": "semantic_scholar",
+            "url": "https://example.org/ss-01",
+            "open_access": true
+          }
+        ],
+        "actions_executed": [
+          {
+            "action": "search",
+            "tool": "openalex",
+            "query": "systematic review screening",
+            "limit": 2
+          },
+          {
+            "action": "search",
+            "tool": "crossref",
+            "query": "systematic review screening",
+            "limit": 2
+          },
+          {
+            "action": "search",
+            "tool": "semantic_scholar",
+            "query": "systematic review screening",
+            "limit": 2
+          },
+          {
+            "action": "finish",
+            "tool": null,
+            "query": null,
+            "limit": null
+          }
+        ],
+        "observations": [
+          {
+            "tool": "openalex",
+            "status": "rate_limited",
+            "count": 0,
+            "latency_seconds": 8.210000009967189e-05,
+            "error": "HTTP 429",
+            "papers": [],
+            "raw_action": null
+          },
+          {
+            "tool": "crossref",
+            "status": "success",
+            "count": 2,
+            "latency_seconds": 8.900000011635711e-06,
+            "error": null,
+            "papers": [
+              {
+                "id": "CR-01",
+                "title": "Large language models for systematic review screening",
+                "abstract": "The same article indexed by a second source.",
+                "doi": "10.1000/slr.001",
+                "source": "crossref",
+                "url": "https://example.org/cr-01",
+                "open_access": true
+              },
+              {
+                "id": "CR-02",
+                "title": "Human oversight of AI-assisted study selection",
+                "abstract": "Uncertainty and human validation remain necessary.",
+                "doi": "10.1000/slr.002",
+                "source": "crossref",
+                "url": "https://example.org/cr-02",
+                "open_access": false
+              }
+            ],
+            "raw_action": null
+          },
+          {
+            "tool": "semantic_scholar",
+            "status": "success",
+            "count": 1,
+            "latency_seconds": 3.600000127335079e-06,
+            "error": null,
+            "papers": [
+              {
+                "id": "SS-01",
+                "title": "Generative AI for title and abstract screening",
+                "abstract": "Evaluation of recall in software engineering reviews.",
+                "doi": "10.1000/slr.003",
+                "source": "semantic_scholar",
+                "url": "https://example.org/ss-01",
+                "open_access": true
+              }
+            ],
+            "raw_action": null
+          }
+        ],
+        "trace": [
+          {
+            "step": 1,
+            "action": {
+              "action": "search",
+              "tool": "openalex",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "openalex",
+              "status": "rate_limited",
+              "count": 0,
+              "latency_seconds": 8.210000009967189e-05,
+              "error": "HTTP 429",
+              "papers": [],
+              "raw_action": null
+            }
+          },
+          {
+            "step": 2,
+            "action": {
+              "action": "search",
+              "tool": "crossref",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "crossref",
+              "status": "success",
+              "count": 2,
+              "latency_seconds": 8.900000011635711e-06,
+              "error": null,
+              "papers": [
+                {
+                  "id": "CR-01",
+                  "title": "Large language models for systematic review screening",
+                  "abstract": "The same article indexed by a second source.",
+                  "doi": "10.1000/slr.001",
+                  "source": "crossref",
+                  "url": "https://example.org/cr-01",
+                  "open_access": true
+                },
+                {
+                  "id": "CR-02",
+                  "title": "Human oversight of AI-assisted study selection",
+                  "abstract": "Uncertainty and human validation remain necessary.",
+                  "doi": "10.1000/slr.002",
+                  "source": "crossref",
+                  "url": "https://example.org/cr-02",
+                  "open_access": false
+                }
+              ],
+              "raw_action": null
+            }
+          },
+          {
+            "step": 3,
+            "action": {
+              "action": "search",
+              "tool": "semantic_scholar",
+              "query": "systematic review screening",
+              "limit": 2
+            },
+            "observation": {
+              "tool": "semantic_scholar",
+              "status": "success",
+              "count": 1,
+              "latency_seconds": 3.600000127335079e-06,
+              "error": null,
+              "papers": [
+                {
+                  "id": "SS-01",
+                  "title": "Generative AI for title and abstract screening",
+                  "abstract": "Evaluation of recall in software engineering reviews.",
+                  "doi": "10.1000/slr.003",
+                  "source": "semantic_scholar",
+                  "url": "https://example.org/ss-01",
+                  "open_access": true
+                }
+              ],
+              "raw_action": null
+            }
+          }
+        ],
+        "errors": [
+          "HTTP 429"
+        ],
+        "step": 4,
+        "finished": true,
+        "stop_reason": "agent_finish"
+      }
+    }
+  }
+}

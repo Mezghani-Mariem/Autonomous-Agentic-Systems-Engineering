@@ -1,0 +1,83 @@
+{
+  "id": "2026-11-20T11-57-38-b-1109e9b08f",
+  "benchmark": "b",
+  "title": "Rule-Based vs LLM Screening",
+  "started_utc": "2026-11-20T11:57:38.860563+00:00",
+  "elapsed_seconds": 49.161603700000114,
+  "cache": "disabled for provider calls",
+  "conditions": "same saved historical source records, real configured LLM for the LLM arm",
+  "data_sha256": {
+    "screening_snapshot.json": "b2c5da24020f4577904b2f7d4a1e082fb5b7f5b6dcdf4296b961c5e62f248d31"
+  },
+  "implementation_sha256": {
+    "slr/__init__.py": "5f85e3446cf1cd8ef819c0795f3f23020f5834792ec517382327b0c78c8105de",
+    "slr/__main__.py": "d663f0231315b7ce50f23cfb8d53604e53e66e8c228a8454ea24cb951fabc669",
+    "slr/course/__init__.py": "aac1f94c55ffd214b584d754a19428d75673c6017db37f02d317bcb522f1fd23",
+    "slr/course/agentic_rag.py": "3ff4c0458639bfc71ea7ea7a49f7730ecd2fcd550ad105137abf283618923464",
+    "slr/course/agentic_rag_models.py": "23be9f633d045833bc43efe16e9b5551add633e148e41b4d61cf710b41ffd020",
+    "slr/course/artifacts.py": "6d75f58b05d1dba15696a746a5344e0904eb0b51dfc9dc562bcb5301702519e1",
+    "slr/course/contracts.py": "1da0dcb0794ab83472045bdb589f2a66bae69436dfa8a6377c3db00e351c0308",
+    "slr/course/llm_screening_agent.py": "ae9100185eb98b19a67a34ff7f8d7ce3f5a57e1c8f570eac67848e9c8daff776",
+    "slr/course/orchestrator.py": "de125855dc07841071b4159edb6ec80390d472ac6190664648f3cecd66699e43",
+    "slr/course/pdf_loader.py": "8b3a4eece2678297f152dcfd42f4bef075d6eee4501b79974734c5ee1820af5a",
+    "slr/course/plan_and_execute.py": "c60d6521f1b5ad868fde0d27977a2652d6808b96dcb03447af520c388e1b225a",
+    "slr/course/planning_models.py": "08838cc42459e5f3c5e110f2e400f26f8ee16b362f2352c5fbb507854650e76d",
+    "slr/course/policies.py": "c12725b955caee8dc401438657746129f869ac9a25b933c20137ae9dbfe9afeb",
+    "slr/course/quality_agent.py": "fc1bb8f91b6229c3f0f555215453592bb921793c222174fc2e5250d606ca3c88",
+    "slr/course/quality_models.py": "4499f9c3d8291c54a956e3ac91a8a2e8762b1c57e553012aac9ef21f71d7025f",
+    "slr/course/rag_models.py": "8c3b2372f5aa3df3e5330430a7faba378c22aacd4d7ac8e1a6cceb04e278e612",
+    "slr/course/rag_pipeline.py": "b5b1e844e42ea06b01cbbb02f98ee0140f2c3c841cec2dbaab78573409fff245",
+    "slr/course/react_agent.py": "259a68990f4091765339697defb316928df138ac4482f7d14efe0fc2eb91c045",
+    "slr/course/research_questions.py": "112483d06bf2a964942288969595ca765a4803ad8cdf1324c48f65d4ae621caa",
+    "slr/course/runtime.py": "2aa880b0e06c91a4f6dadc0308b0fe77b1f97fc4c5bd29403ed0f479d0a48f08",
+    "slr/course/screening_agent.py": "ecbb86658ad21674a5d928a1a17261ae67f8a9daeca93303e2274e941d10e835",
+    "slr/course/search_plan.py": "44d357eb54e021c3029d5c79bf829f2eb7ac4731ff4e95d714db065519648dca",
+    "slr/course/tools.py": "8e6e486858ea43134762a8ec8fcbe78e8ec837ed437d1224f3c282ad9e33f8e9",
+    "slr/course/workflow.py": "8f04ff96d4b0c2243db146b3293805252f901977607422f36b4d1a652e801d91",
+    "slr/gateway.py": "f0f0c212bc1ae33f91f99f68185eb6ef6f3a8e0d8f5d3bed2348856d498594ef",
+    "slr/health.py": "e013ed3eeeff900d3ab812a84787404e8ebf71c31968090a1b318bfcf8fd4583",
+    "slr/models.py": "677a4ef973f6acabee9a9ad2ff0d98bdf9beb67eb8033feb30615f1bbc4274c1",
+    "slr/planning.py": "8414e5359dfb49c69bebc4b29816368b0707602336e2ed15828511e2d805e2fc",
+    "slr/report.py": "59882a246198d725a7eeb9be803ed7d2dbc7d591dbad5348d60c70d131646a35",
+    "slr/retrieval.py": "14c9de152eeb3ff0c70f0c34c7ba0e27cef2be92abce3d2fec167c2c3e2d2df8",
+    "slr/screen.py": "83bbf389e6fb5da4887703a7bd800fe335c0afe0b965beccd4b529b44b0ebfb7",
+    "slr/settings.py": "9b12e891135ca053c7556d076437a69038b530714c4ad079ee4f233c6b5ce63a",
+    "slr/sources.py": "e85967e79b35196bffbc7900b4b640f15f25194be0ae907a0b7aaf95f5fb332e",
+    "slr/storage.py": "0c56b88ef4b79f698e84d35eda29e26d9260379cc90bddc5de2c7895c07dd348",
+    "slr/supervisor.py": "7f59280742e5f5d852f5a6e27fedebf7726c3b745180e376fbce3fe586f12c91",
+    "slr/synthesis.py": "ae2fadc1e547f0da44b79772dd9b95e00dfd1f60aa6ee53da9856fd67ea1d188",
+    "evaluation/__init__.py": "88f3ccdc89d823618cc6bc97772b57f2c8e890f4038b0874a1ebb9017650a3e8",
+    "evaluation/__main__.py": "ec11cbe2f1f14b5cae44eb686964e653a0d351a5b6789fa50431211cd4a027b1",
+    "evaluation/benchmarks.py": "62b8dc870fe2d899944c7e973e02e5dd22e9ebc047c7b4b6a51dffd83a504cba",
+    "evaluation/metrics.py": "689b886924eec1920f5c803b69c504b2857ecf2affdd61d25c52e83efc8e2b90"
+  },
+  "runtime": {
+    "python": "3.12.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "pydantic": "2.13.5",
+    "langchain-core": "1.6.4",
+    "httpx": "0.28.1"
+  },
+  "model_config": {
+    "provider": "ollama",
+    "model": "qwen2.5:7b",
+    "embedding": null,
+    "temperature": 0
+  },
+  "events": [
+    {
+      "stage": "screening",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+      "calls": 9,
+      "cache_hits": 0,
+      "successes": 9,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 48.8208,
+      "input_tokens": 6036,
+      "output_tokens": 1484,
+      "calls_with_token_usage": 9
+    }
+  ]
+}

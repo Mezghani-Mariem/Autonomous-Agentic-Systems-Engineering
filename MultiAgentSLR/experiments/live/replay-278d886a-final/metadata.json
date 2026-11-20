@@ -1,0 +1,10 @@
+{
+  "parent_review_id": "278d886ab8a94ef6bc17229cb4b69fe6",
+  "replay_id": "65af34fdf89a45d4a6b55fc31e0c82de",
+  "baseline_status": "insufficient_evidence",
+  "replayed_stages_start_at": "rag",
+  "search_and_screening_identical": true,
+  "provider": "ollama",
+  "model": "qwen2.5:7b",
+  "cache_ttl": 0
+}

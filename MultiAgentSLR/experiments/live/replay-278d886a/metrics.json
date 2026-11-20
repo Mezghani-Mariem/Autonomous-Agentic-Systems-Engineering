@@ -1,0 +1,674 @@
+{
+  "configuration": {
+    "topic": "How are large language models evaluated for title and abstract screening in systematic literature reviews?",
+    "provider": "ollama",
+    "execution_mode": "automatic",
+    "per_source": 4,
+    "search": "react",
+    "screen": "llm",
+    "retrieval": "agentic",
+    "orchestration": "supervisor",
+    "top_k": 3,
+    "retrieval_budget": 2,
+    "revision_budget": 1,
+    "pause_for_documents": false,
+    "inclusion": "Primary research relevant to the topic.",
+    "exclusion": "Exclude out-of-scope work and records without primary research."
+  },
+  "flow": {
+    "discovered": 12,
+    "deduplicated": 10,
+    "duplicates": 2,
+    "screened": 10,
+    "included": 6,
+    "excluded": 0,
+    "pending": 4,
+    "unresolved": 4,
+    "automatically_included": 6,
+    "automatically_excluded": 0
+  },
+  "planner": {
+    "research_question_validity": 1.0,
+    "query_validity": 1.0,
+    "repair_attempts": 0,
+    "protocol_repairs": 0,
+    "plan": {
+      "valid": true,
+      "plan_validity_rate": 1.0,
+      "rq_coverage": 1.0,
+      "section_coverage": 0.0,
+      "consistency": 1.0,
+      "errors": []
+    }
+  },
+  "search": {
+    "tool_counts": {
+      "openalex": 1,
+      "semantic_scholar": 1,
+      "crossref": 1
+    },
+    "successful_tool_actions": 3,
+    "failed_tool_actions": 0,
+    "observed_latency_seconds": 0.0016,
+    "stop_reason": "agent_finish"
+  },
+  "screening": {
+    "llm": null,
+    "final": null
+  },
+  "retrieval": [
+    {
+      "rq_id": "RQ1",
+      "method": "tf-idf + adaptive lexical",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 3,
+      "requested_k": 3,
+      "facet_coverage": 1.0,
+      "covered": [
+        "evaluation_criteria"
+      ],
+      "missing": [],
+      "ranks": [
+        "abstract:P-467c8a257916fffe_c3",
+        "abstract:P-955f95396b410f69_c1",
+        "abstract:P-2ba098aa70c61452_c1"
+      ],
+      "query": "Quels critères et méthodes sont utilisés pour l'évaluation des modèles de langage lors du tri par titre et résumé dans les revues systématiques ? criteria methods",
+      "extraction": {
+        "status": "verified",
+        "candidate_count": 20,
+        "selections": [
+          {
+            "chunk_id": "abstract:P-955f95396b410f69_c1",
+            "candidate_id": 12
+          },
+          {
+            "chunk_id": "abstract:P-2ba098aa70c61452_c1",
+            "candidate_id": 18
+          }
+        ],
+        "rejections": [],
+        "verified_count": 2,
+        "reason": ""
+      },
+      "precision_at_k": null,
+      "recall_at_k": null
+    },
+    {
+      "rq_id": "RQ2",
+      "method": "tf-idf + adaptive lexical",
+      "status": "completed",
+      "retrieval_calls": 1,
+      "selected": 3,
+      "requested_k": 3,
+      "facet_coverage": 1.0,
+      "covered": [
+        "model_types",
+        "review_quality_efficiency"
+      ],
+      "missing": [],
+      "ranks": [
+        "abstract:P-2ba098aa70c61452_c2",
+        "abstract:P-29185e5a55fb2217_c1",
+        "abstract:P-2ba098aa70c61452_c1"
+      ],
+      "query": "Comment la qualité et l'efficacité des processus d'évaluation des titres et des résumés varient-elles selon différents types de modèles de langage (par exemple, GPT, BERT) et de revues systématiques ? quality efficacy types of models systematic reviews",
+      "extraction": {
+        "status": "verified",
+        "candidate_count": 20,
+        "selections": [
+          {
+            "chunk_id": "abstract:P-2ba098aa70c61452_c1",
+            "candidate_id": 17
+          },
+          {
+            "chunk_id": "abstract:P-2ba098aa70c61452_c1",
+            "candidate_id": 18
+          },
+          {
+            "chunk_id": "abstract:P-2ba098aa70c61452_c2",
+            "candidate_id": 3
+          },
+          {
+            "chunk_id": "abstract:P-2ba098aa70c61452_c2",
+            "candidate_id": 4
+          },
+          {
+            "chunk_id": "abstract:P-29185e5a55fb2217_c1",
+            "candidate_id": 10
+          },
+          {
+            "chunk_id": "abstract:P-29185e5a55fb2217_c1",
+            "candidate_id": 14
+          }
+        ],
+        "rejections": [],
+        "verified_count": 6,
+        "reason": ""
+      },
+      "precision_at_k": null,
+      "recall_at_k": null
+    },
+    {
+      "rq_id": "RQ3",
+      "method": "tf-idf + adaptive lexical",
+      "status": "budget_exhausted",
+      "retrieval_calls": 2,
+      "selected": 3,
+      "requested_k": 3,
+      "facet_coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "evaluation_challenges",
+        "solution_strategies"
+      ],
+      "ranks": [
+        "abstract:P-2f24266ea340655e_c2",
+        "abstract:P-2f24266ea340655e_c1",
+        "abstract:P-467c8a257916fffe_c1"
+      ],
+      "query": "Quels sont les défis principaux rencontrés lors de l'évaluation des modèles de langage pour le tri par titre et résumé dans le contexte des revues systématiques, et comment ces défis peuvent-ils être surmontés ? challenges overcome",
+      "extraction": {
+        "status": "verified",
+        "candidate_count": 20,
+        "selections": [
+          {
+            "chunk_id": "abstract:P-2f24266ea340655e_c1",
+            "candidate_id": 9
+          },
+          {
+            "chunk_id": "abstract:P-2f24266ea340655e_c1",
+            "candidate_id": 6
+          }
+        ],
+        "rejections": [
+          "Candidate 6 does not belong to chunk abstract:P-2f24266ea340655e_c1."
+        ],
+        "verified_count": 1,
+        "reason": ""
+      },
+      "precision_at_k": null,
+      "recall_at_k": null
+    }
+  ],
+  "screening_audit": {
+    "origin": "screening",
+    "decisions": [
+      {
+        "paper_id": "P-955f95396b410f69",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The study evaluates the effectiveness of an LLM (GPT-4o) in title and abstract screening compared with human reviewers, which is directly relevant to primary research on how large language models are evaluated for such tasks. The work provides insights into the use of LLMs for systematic review processes, specifically living systematic reviews (LSRs), which aligns with the topic of the SLR.",
+        "quote": "Development and evaluation of prompts for a large language model to screen titles and abstracts in a living systematic review",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 1.0,
+        "screening_reason": "The AI decision passed the screening checks. The study evaluates the effectiveness of an LLM (GPT-4o) in title and abstract screening compared with human reviewers, which is directly relevant to primary research on how large language models are evaluated for such tasks. The work provides insights into the use of LLMs for systematic review processes, specifically living systematic reviews (LSRs), which aligns with the topic of the SLR.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-ec09b3e73f8489ef",
+        "rule": null,
+        "llm": null,
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "Abstract unavailable. A reviewer can assess the record or supply the full text.",
+        "quote": "",
+        "quote_verified": null,
+        "rule_reason": "",
+        "llm_confidence": null,
+        "screening_reason": "Abstract unavailable. A reviewer can assess the record or supply the full text.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-39e515cd23467ff5",
+        "rule": null,
+        "llm": "include",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "No grounded excerpt was supplied. The title and abstract discuss the use of large language models (LLMs) for automating the title and abstract screening phase in systematic reviews, which is directly relevant to the topic. The study evaluates multiple LLM-based workflows on eight independent SR datasets, focusing on EMF and non-EMF research domains, providing a structured approach that aligns with primary research.",
+        "quote": "How are large language models evaluated for title and abstract screening in systematic literature reviews? Cost-Efficient Large Language Model-Assisted Title and Abstract Screening for Systematic Reviews: Method Evaluation and Validation",
+        "quote_verified": false,
+        "rule_reason": "",
+        "llm_confidence": 0.98,
+        "screening_reason": "No grounded excerpt was supplied. The title and abstract discuss the use of large language models (LLMs) for automating the title and abstract screening phase in systematic reviews, which is directly relevant to the topic. The study evaluates multiple LLM-based workflows on eight independent SR datasets, focusing on EMF and non-EMF research domains, providing a structured approach that aligns with primary research.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-2ba098aa70c61452",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The title and abstract indicate that this paper is a systematic review (SR) of large language models (LLMs) used for title/abstract screening in systematic literature reviews. The study aims to develop an LLM-based screening tool and compare its performance with existing models, which directly addresses the topic of primary research relevant to the subject. The abstract mentions that studies were included if they reported sufficient data to create a confusion matrix, indicating that only primary research is considered.",
+        "quote": "Screening titles and abstracts for systematic reviews (SRs) is a labor-intensive and error-prone process. With the advent of large language models (LLMs), there is potential to automate and improve the efficiency of this process. This study aims to develop an LLM-based screening tool and compare its performance with existing LLM models in terms of sensitivity, specificity, and precision.",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 1.0,
+        "screening_reason": "The AI decision passed the screening checks. The title and abstract indicate that this paper is a systematic review (SR) of large language models (LLMs) used for title/abstract screening in systematic literature reviews. The study aims to develop an LLM-based screening tool and compare its performance with existing models, which directly addresses the topic of primary research relevant to the subject. The abstract mentions that studies were included if they reported sufficient data to create a confusion matrix, indicating that only primary research is considered.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-2f24266ea340655e",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The title and abstract indicate that this paper is a primary research study relevant to the topic of evaluating large language models (LLMs) for title-abstract screening in systematic reviews, specifically focusing on low-prevalence contexts. The content discusses validation methods and performance metrics of several LLMs against a gold-standard dataset, which directly addresses the use of LLMs in this context.",
+        "quote": "Literature screening is a major bottleneck in systematic reviews, yet Large Language Models (LLMs) can substantially reduce workloads. However, performance varies across models and is sensitive to evaluation metrics, particularly in low-prevalence screening contexts.",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 1.0,
+        "screening_reason": "The AI decision passed the screening checks. The title and abstract indicate that this paper is a primary research study relevant to the topic of evaluating large language models (LLMs) for title-abstract screening in systematic reviews, specifically focusing on low-prevalence contexts. The content discusses validation methods and performance metrics of several LLMs against a gold-standard dataset, which directly addresses the use of LLMs in this context.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-6f6f52e1e17e290f",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The title and abstract discuss the automation of systematic review processes, specifically focusing on the use of large language models for tasks such as title and abstract screening. The paper introduces LatteReview, a framework that aims to streamline workflows in systematic reviews by leveraging LLMs.",
+        "quote": "Systematic literature reviews and meta-analyses are essential for synthesizing research insights, but they remain time-intensive and labor-intensive due to the iterative processes of screening, evaluation, and data extraction. This paper introduces and evaluates LatteReview, a Python-based framework that leverages large language models (LLMs) and multi-agent systems to automate key elements of the systematic review process.",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 1.0,
+        "screening_reason": "The AI decision passed the screening checks. The title and abstract discuss the automation of systematic review processes, specifically focusing on the use of large language models for tasks such as title and abstract screening. The paper introduces LatteReview, a framework that aims to streamline workflows in systematic reviews by leveraging LLMs.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-467c8a257916fffe",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The study evaluates a non-generative model (Jev) for title and abstract screening in systematic reviews, which is relevant to the topic of evaluating large language models. It compares Jev with generative LLMs on specific datasets related to bipolar disorder treatments, providing empirical evidence.",
+        "quote": "Abstract Large language models (LLMs) screen titles and abstracts without review-specific training, but generating screening decisions as text takes processing time and incurs API charges. We evaluated Jev, a non-generative model returning classification probabilities, on 4527 records from two systematic reviews of bipolar disorder treatments.",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 0.95,
+        "screening_reason": "The AI decision passed the screening checks. The study evaluates a non-generative model (Jev) for title and abstract screening in systematic reviews, which is relevant to the topic of evaluating large language models. It compares Jev with generative LLMs on specific datasets related to bipolar disorder treatments, providing empirical evidence.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-5222785d1a599b1d",
+        "rule": null,
+        "llm": "exclude",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "No grounded excerpt was supplied. The title and abstract focus on explainable artificial intelligence techniques for large language models, which is not directly related to evaluating LLMs in the context of systematic literature reviews as specified in the inclusion criteria.",
+        "quote": "How are large language models evaluated for title and abstract screening in systematic literature reviews? This paper addresses the opacity of Large Language Models (LLMs) by presenting a critical review of Explainable Artificial Intelligence (XAI) techniques. Focusing on post-hoc methods, specifically feature attribution and counterfactual explanations, this work moves beyond experimental implementation to organize and analyze the existing literature.",
+        "quote_verified": false,
+        "rule_reason": "",
+        "llm_confidence": 0.95,
+        "screening_reason": "No grounded excerpt was supplied. The title and abstract focus on explainable artificial intelligence techniques for large language models, which is not directly related to evaluating LLMs in the context of systematic literature reviews as specified in the inclusion criteria.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-29185e5a55fb2217",
+        "rule": null,
+        "llm": "include",
+        "final": "include",
+        "decided_by": "ai",
+        "reason": "The AI decision passed the screening checks. The study evaluates Jev, a non-generative decision model, for title and abstract screening in systematic reviews. It compares the performance of Jev with generative large language models (GPT-5 mini and GPT-6 Astra) using records from two systematic reviews on bipolar disorder treatments. The research provides sensitivity and specificity metrics, which are relevant to primary research.",
+        "quote": "We evaluated Jev, a non-generative decision model, for title and abstract screening using 4527 records from two systematic reviews of bipolar disorder treatments previously used in our 2024 Journal of Medical Internet Research study. Human decisions to retain records for full-text assessment served as the reference.",
+        "quote_verified": true,
+        "rule_reason": "",
+        "llm_confidence": 0.95,
+        "screening_reason": "The AI decision passed the screening checks. The study evaluates Jev, a non-generative decision model, for title and abstract screening in systematic reviews. It compares the performance of Jev with generative large language models (GPT-5 mini and GPT-6 Astra) using records from two systematic reviews on bipolar disorder treatments. The research provides sensitivity and specificity metrics, which are relevant to primary research.",
+        "review_history": []
+      },
+      {
+        "paper_id": "P-5e8fa8d1ab83a6eb",
+        "rule": null,
+        "llm": "include",
+        "final": "uncertain",
+        "decided_by": "pending",
+        "reason": "No grounded excerpt was supplied. The title and abstract clearly indicate that this paper is a primary research study relevant to the topic of evaluating large language models for title-and-abstract screening in systematic literature reviews. The content discusses methods, results, and conclusions related to the use of multiple LLMs for this specific task.",
+        "quote": "How are large language models evaluated for title and abstract screening in systematic literature reviews? / Abstract Background The exponential growth of scientific literature poses significant challenges for conducting systematic reviews, particularly in the labor-intensive title-and-abstract screening phase. This study examines the feasibility of using multiple large language models (LLMs) for title-and-abstract screening in systematic reviews.",
+        "quote_verified": false,
+        "rule_reason": "",
+        "llm_confidence": 0.95,
+        "screening_reason": "No grounded excerpt was supplied. The title and abstract clearly indicate that this paper is a primary research study relevant to the topic of evaluating large language models for title-and-abstract screening in systematic literature reviews. The content discusses methods, results, and conclusions related to the use of multiple LLMs for this specific task.",
+        "review_history": []
+      }
+    ],
+    "policy": "llm-evidence-v1"
+  },
+  "evidence_corpus": {
+    "included_abstracts": 6,
+    "abstract_chunks": 16,
+    "full_text_chunks": 0,
+    "missing_text_paper_ids": []
+  },
+  "planning_execution": {
+    "valid": true,
+    "plan_validity_rate": 1.0,
+    "rq_coverage": 1.0,
+    "section_coverage": 1.0,
+    "consistency": 1.0,
+    "errors": [],
+    "completed_steps": 3,
+    "dependency_validity": 1.0,
+    "execution_actions": 5,
+    "status": "completed"
+  },
+  "quality": [
+    {
+      "revision": 0,
+      "citation_validity": 0.8,
+      "lexical_support": 0.75,
+      "automated_score": 0.85,
+      "question_coverage": 1.0,
+      "findings": [
+        {
+          "claim_id": "C1",
+          "judgment": "supported",
+          "reason": "The cited passage from the abstract of paper P-955f95396b410f69 exactly matches the claim, indicating that human decisions from an LSR on prodopaminergic interventions for anhedonia served as the reference standard."
+        },
+        {
+          "claim_id": "C2",
+          "judgment": "unsupported",
+          "reason": "Citation missing, unknown, or assigned to a different research question."
+        },
+        {
+          "claim_id": "C3",
+          "judgment": "unsupported",
+          "reason": "The cited passage does not mention any specific number of models or their performance metrics. It only states that a screening tool was created using GPT-4o-mini and tested with existing SRs, which is different from the claim about 14 LLM-based models."
+        },
+        {
+          "claim_id": "C4",
+          "judgment": "supported",
+          "reason": "The cited passage from the abstract of paper P-29185e5a55fb2217 exactly matches the claim, providing specific sensitivity and specificity values for Jev Choice compared to GPT-5 mini and GPT-6 Astra, along with API charges per 1000 records."
+        },
+        {
+          "claim_id": "C5",
+          "judgment": "supported",
+          "reason": "The cited passage from the abstract of paper P-2f24266ea340655e exactly matches the claim, stating that performance varies across models and is sensitive to evaluation metrics, particularly in low-prevalence screening contexts."
+        }
+      ],
+      "invalid_claims": [
+        "C2"
+      ],
+      "feedback": [
+        "C2: Citation missing, unknown, or assigned to a different research question.",
+        "C3: The cited passage does not mention any specific number of models or their performance metrics. It only states that a screening tool was created using GPT-4o-mini and tested with existing SRs, which is different from the claim about 14 LLM-based models."
+      ],
+      "detected_unsupported": 2,
+      "uncertain": 0
+    },
+    {
+      "revision": 1,
+      "citation_validity": 0.5,
+      "lexical_support": 0.0,
+      "automated_score": 0.27777777777777773,
+      "question_coverage": 0.3333333333333333,
+      "findings": [
+        {
+          "claim_id": "C1",
+          "judgment": "unsupported",
+          "reason": "Citation missing, unknown, or assigned to a different research question."
+        },
+        {
+          "claim_id": "C2",
+          "judgment": "unsupported",
+          "reason": "The cited passage only mentions the use of a single LLM-based model (GPT-4o-mini) for creating a screening tool and testing its utility. It does not provide information about 14 different LLM-based models or their varying performance metrics."
+        }
+      ],
+      "invalid_claims": [
+        "C1"
+      ],
+      "feedback": [
+        "C1: Citation missing, unknown, or assigned to a different research question.",
+        "C2: The cited passage only mentions the use of a single LLM-based model (GPT-4o-mini) for creating a screening tool and testing its utility. It does not provide information about 14 different LLM-based models or their varying performance metrics."
+      ],
+      "detected_unsupported": 2,
+      "uncertain": 0
+    }
+  ],
+  "human_claim_judgments": [],
+  "overall": {
+    "status": "insufficient_evidence",
+    "task_completed": false,
+    "outcome_reason": "No supported, cited claims remained after quality review.",
+    "withheld_claims": 2,
+    "active_seconds": 149.7826,
+    "elapsed_seconds": 5946.304587,
+    "input_tokens": 19447,
+    "output_tokens": 4053,
+    "calls_with_token_usage": 20,
+    "api_errors": 0,
+    "retries": 0,
+    "human_interventions": 1,
+    "revision_success": false
+  },
+  "events_by_agent": [
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/invoke",
+      "calls": 0,
+      "cache_hits": 1,
+      "successes": 0,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0012,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/ProtocolProposal",
+      "calls": 1,
+      "cache_hits": 0,
+      "successes": 1,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 18.4591,
+      "input_tokens": 346,
+      "output_tokens": 356,
+      "calls_with_token_usage": 1
+    },
+    {
+      "stage": "planning",
+      "kind": "agent",
+      "operation": "planning",
+      "calls": 1,
+      "cache_hits": 0,
+      "successes": 1,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 18.4748,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "openalex",
+      "calls": 0,
+      "cache_hits": 1,
+      "successes": 0,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0007,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "semantic_scholar",
+      "calls": 0,
+      "cache_hits": 1,
+      "successes": 0,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0004,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "crossref",
+      "calls": 0,
+      "cache_hits": 1,
+      "successes": 0,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0003,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "search",
+      "kind": "agent",
+      "operation": "search",
+      "calls": 1,
+      "cache_hits": 0,
+      "successes": 1,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0026,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "screening",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/LLMScreeningDecision",
+      "calls": 9,
+      "cache_hits": 0,
+      "successes": 9,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 57.2333,
+      "input_tokens": 5603,
+      "output_tokens": 1785,
+      "calls_with_token_usage": 9
+    },
+    {
+      "stage": "screening",
+      "kind": "agent",
+      "operation": "screening",
+      "calls": 1,
+      "cache_hits": 0,
+      "successes": 1,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 57.2474,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "rag",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/Extraction",
+      "calls": 6,
+      "cache_hits": 0,
+      "successes": 6,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 39.636,
+      "input_tokens": 7302,
+      "output_tokens": 902,
+      "calls_with_token_usage": 6
+    },
+    {
+      "stage": "rag",
+      "kind": "agent",
+      "operation": "rag",
+      "calls": 2,
+      "cache_hits": 0,
+      "successes": 2,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 39.6654,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "rag",
+      "kind": "human",
+      "operation": "retry_retrieval",
+      "calls": 1,
+      "cache_hits": 0,
+      "successes": 1,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "writing",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/ClaimProposal",
+      "calls": 2,
+      "cache_hits": 0,
+      "successes": 2,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 20.8687,
+      "input_tokens": 4717,
+      "output_tokens": 589,
+      "calls_with_token_usage": 2
+    },
+    {
+      "stage": "writing",
+      "kind": "agent",
+      "operation": "writing",
+      "calls": 2,
+      "cache_hits": 0,
+      "successes": 2,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 20.871,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    },
+    {
+      "stage": "quality",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/JudgeResponse",
+      "calls": 2,
+      "cache_hits": 0,
+      "successes": 2,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 13.5192,
+      "input_tokens": 1479,
+      "output_tokens": 421,
+      "calls_with_token_usage": 2
+    },
+    {
+      "stage": "quality",
+      "kind": "agent",
+      "operation": "quality",
+      "calls": 2,
+      "cache_hits": 0,
+      "successes": 2,
+      "failures": 0,
+      "retries": 0,
+      "latency_seconds": 13.5215,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls_with_token_usage": 0
+    }
+  ]
+}

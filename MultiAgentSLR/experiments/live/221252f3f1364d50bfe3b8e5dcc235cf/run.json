@@ -1,0 +1,631 @@
+{
+  "id": "221252f3f1364d50bfe3b8e5dcc235cf",
+  "config": {
+    "topic": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+    "provider": "ollama",
+    "execution_mode": "automatic",
+    "per_source": 2,
+    "search": "react",
+    "screen": "hybrid",
+    "retrieval": "agentic",
+    "orchestration": "supervisor",
+    "top_k": 3,
+    "retrieval_budget": 2,
+    "revision_budget": 1,
+    "pause_for_documents": false,
+    "inclusion": "Include primary empirical studies evaluating large language models for title or abstract screening in systematic literature reviews.",
+    "exclusion": "Exclude narrative reviews and studies about unrelated screening or tasks outside systematic literature reviews."
+  },
+  "status": "failed",
+  "next_stage": "search",
+  "created": "2026-11-20T13:00:01.847046+00:00",
+  "updated": "2026-11-20T13:00:32.009014+00:00",
+  "version": 3,
+  "revision": 0,
+  "error": "search: All bibliographic sources failed. See the search trace and API settings.",
+  "outcome_reason": "",
+  "plan": {
+    "origin": "planning",
+    "questions": [
+      {
+        "identifier": "RQ1",
+        "question": "Quels sont les critères d'évaluation empiriques utilisés pour comparer la performance des grandes modèles de langage dans l' Screening des titres et résumés par rapport aux méthodes traditionnelles lors de la réalisation d'une revue systématique ?"
+      },
+      {
+        "identifier": "RQ2",
+        "question": "Comment se compare-t-il le temps de traitement et la précision du tri des titres et résumés effectués par les grandes modèles de langage par rapport à l'approche humaine dans le contexte des revues systématiques ?"
+      },
+      {
+        "identifier": "RQ3",
+        "question": "Quels sont les avantages et inconvénients observés lors de l'utilisation des grandes modèles de langage pour l'évaluation initiale des titres et résumés dans la réalisation d'une revue systématique ?"
+      }
+    ],
+    "protocol": {
+      "queries": {
+        "openalex": "large language models title abstract systematic review",
+        "semantic_scholar": "large language models title abstract systematic review",
+        "crossref": "large language models title abstract systematic review"
+      },
+      "questions": [
+        {
+          "rq_id": "RQ1",
+          "terms": [
+            "empirical evaluation",
+            "performance comparison",
+            "traditional methods"
+          ],
+          "facets": [
+            {
+              "id": "evaluation_criteria",
+              "label": "Evaluation Criteria",
+              "keywords": [
+                "criteria",
+                "metrics"
+              ],
+              "query_hint": "criteria metrics"
+            },
+            {
+              "id": "model_performance",
+              "label": "Model Performance",
+              "keywords": [
+                "accuracy",
+                "precision"
+              ],
+              "query_hint": "accuracy precision"
+            }
+          ]
+        },
+        {
+          "rq_id": "RQ2",
+          "terms": [
+            "processing time",
+            "triage accuracy"
+          ],
+          "facets": [
+            {
+              "id": "processing_time",
+              "label": "Processing Time",
+              "keywords": [
+                "time",
+                "speed"
+              ],
+              "query_hint": "time speed"
+            },
+            {
+              "id": "triage_accuracy",
+              "label": "Triage Accuracy",
+              "keywords": [
+                "precision",
+                "recall"
+              ],
+              "query_hint": "precision recall"
+            }
+          ]
+        },
+        {
+          "rq_id": "RQ3",
+          "terms": [
+            "advantages",
+            "disadvantages"
+          ],
+          "facets": [
+            {
+              "id": "advantages",
+              "label": "Advantages",
+              "keywords": [
+                "benefits",
+                "efficiency"
+              ],
+              "query_hint": "benefits efficiency"
+            },
+            {
+              "id": "disadvantages",
+              "label": "Disadvantages",
+              "keywords": [
+                "limitations",
+                "errors"
+              ],
+              "query_hint": "limitations errors"
+            }
+          ]
+        }
+      ],
+      "include_signals": [
+        "empirical evaluation",
+        "title abstract screening",
+        "systematic literature review"
+      ],
+      "exclude_signals": [
+        "narrative review",
+        "unrelated screening tasks",
+        "outside systematic literature reviews"
+      ]
+    },
+    "plan": {
+      "strategy": "direct",
+      "objective": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+      "steps": [
+        {
+          "id": "prepare-RQ1",
+          "rq_id": "RQ1",
+          "objective": "Quels sont les critères d'évaluation empiriques utilisés pour comparer la performance des grandes modèles de langage dans l' Screening des titres et résumés par rapport aux méthodes traditionnelles lors de la réalisation d'une revue systématique ?",
+          "evidence_ids": [],
+          "required_facets": [
+            "evaluation_criteria",
+            "model_performance"
+          ],
+          "depends_on": [],
+          "mode": "limitation"
+        },
+        {
+          "id": "prepare-RQ2",
+          "rq_id": "RQ2",
+          "objective": "Comment se compare-t-il le temps de traitement et la précision du tri des titres et résumés effectués par les grandes modèles de langage par rapport à l'approche humaine dans le contexte des revues systématiques ?",
+          "evidence_ids": [],
+          "required_facets": [
+            "processing_time",
+            "triage_accuracy"
+          ],
+          "depends_on": [],
+          "mode": "limitation"
+        },
+        {
+          "id": "prepare-RQ3",
+          "rq_id": "RQ3",
+          "objective": "Quels sont les avantages et inconvénients observés lors de l'utilisation des grandes modèles de langage pour l'évaluation initiale des titres et résumés dans la réalisation d'une revue systématique ?",
+          "evidence_ids": [],
+          "required_facets": [
+            "advantages",
+            "disadvantages"
+          ],
+          "depends_on": [],
+          "mode": "limitation"
+        }
+      ],
+      "reasoning_summary": [],
+      "explored_alternatives": [],
+      "llm_calls": 0
+    },
+    "repair_attempts": 0,
+    "protocol_repairs": 0
+  },
+  "search": {
+    "origin": "search",
+    "papers": [],
+    "discovered": 0,
+    "duplicates": 0,
+    "state": {
+      "objective": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+      "queries": {
+        "openalex": "large language models title abstract systematic review",
+        "semantic_scholar": "large language models title abstract systematic review",
+        "crossref": "large language models title abstract systematic review"
+      },
+      "papers": [],
+      "actions_executed": [
+        {
+          "action": "search",
+          "tool": "openalex",
+          "query": "large language models title abstract systematic review",
+          "limit": 2
+        },
+        {
+          "action": "search",
+          "tool": "crossref",
+          "query": "large language models title abstract systematic review",
+          "limit": 2
+        },
+        {
+          "action": "search",
+          "tool": "semantic_scholar",
+          "query": "large language models title abstract systematic review",
+          "limit": 2
+        },
+        {
+          "action": "finish",
+          "tool": null,
+          "query": null,
+          "limit": null
+        }
+      ],
+      "observations": [
+        {
+          "tool": "openalex",
+          "status": "network_error",
+          "count": 0,
+          "latency_seconds": 3.4452320999998847,
+          "error": "openalex failed (ConnectError)",
+          "papers": [],
+          "raw_action": null
+        },
+        {
+          "tool": "crossref",
+          "status": "network_error",
+          "count": 0,
+          "latency_seconds": 0.5465850000000501,
+          "error": "crossref failed (ConnectError)",
+          "papers": [],
+          "raw_action": null
+        },
+        {
+          "tool": "semantic_scholar",
+          "status": "network_error",
+          "count": 0,
+          "latency_seconds": 0.778371800000059,
+          "error": "semantic_scholar failed (ConnectError)",
+          "papers": [],
+          "raw_action": null
+        }
+      ],
+      "trace": [
+        {
+          "step": 1,
+          "action": {
+            "action": "search",
+            "tool": "openalex",
+            "query": "large language models title abstract systematic review",
+            "limit": 2
+          },
+          "observation": {
+            "tool": "openalex",
+            "status": "network_error",
+            "count": 0,
+            "latency_seconds": 3.4452320999998847,
+            "error": "openalex failed (ConnectError)",
+            "papers": [],
+            "raw_action": null
+          }
+        },
+        {
+          "step": 2,
+          "action": {
+            "action": "search",
+            "tool": "crossref",
+            "query": "large language models title abstract systematic review",
+            "limit": 2
+          },
+          "observation": {
+            "tool": "crossref",
+            "status": "network_error",
+            "count": 0,
+            "latency_seconds": 0.5465850000000501,
+            "error": "crossref failed (ConnectError)",
+            "papers": [],
+            "raw_action": null
+          }
+        },
+        {
+          "step": 3,
+          "action": {
+            "action": "search",
+            "tool": "semantic_scholar",
+            "query": "large language models title abstract systematic review",
+            "limit": 2
+          },
+          "observation": {
+            "tool": "semantic_scholar",
+            "status": "network_error",
+            "count": 0,
+            "latency_seconds": 0.778371800000059,
+            "error": "semantic_scholar failed (ConnectError)",
+            "papers": [],
+            "raw_action": null
+          }
+        }
+      ],
+      "errors": [
+        "openalex failed (ConnectError)",
+        "crossref failed (ConnectError)",
+        "semantic_scholar failed (ConnectError)"
+      ],
+      "step": 4,
+      "finished": true,
+      "stop_reason": "agent_finish"
+    }
+  },
+  "screening": null,
+  "full_text": {},
+  "rag": null,
+  "draft": null,
+  "quality": [],
+  "adjudications": [],
+  "withheld_claim_ids": [],
+  "events": [
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/invoke",
+      "status": "ok",
+      "seconds": 12.526208100000076,
+      "input_tokens": 313,
+      "output_tokens": 174,
+      "retry": false,
+      "detail": "",
+      "timestamp": "2026-11-20T13:00:14.859326+00:00"
+    },
+    {
+      "stage": "planning",
+      "kind": "llm",
+      "operation": "ollama:qwen2.5:7b/ProtocolProposal",
+      "status": "ok",
+      "seconds": 12.367042900000342,
+      "input_tokens": 396,
+      "output_tokens": 438,
+      "retry": false,
+      "detail": "",
+      "timestamp": "2026-11-20T13:00:27.229887+00:00"
+    },
+    {
+      "stage": "planning",
+      "kind": "agent",
+      "operation": "planning",
+      "status": "ok",
+      "seconds": 25.217477499999404,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "",
+      "timestamp": "2026-11-20T13:00:27.229887+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "openalex",
+      "status": "error",
+      "seconds": 3.167669399999795,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:30.406353+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "openalex",
+      "status": "error",
+      "seconds": 0.02683600000000297,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": true,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:30.683048+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "crossref",
+      "status": "error",
+      "seconds": 0.2518110000000888,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:30.935751+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "crossref",
+      "status": "error",
+      "seconds": 0.044035900000380934,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": true,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:31.229976+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "semantic_scholar",
+      "status": "error",
+      "seconds": 0.4675870999999461,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:31.698237+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "api",
+      "operation": "semantic_scholar",
+      "status": "error",
+      "seconds": 0.05998439999984839,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": true,
+      "detail": "ConnectError",
+      "timestamp": "2026-11-20T13:00:32.008392+00:00"
+    },
+    {
+      "stage": "search",
+      "kind": "agent",
+      "operation": "search",
+      "status": "error",
+      "seconds": 4.770719000000099,
+      "input_tokens": null,
+      "output_tokens": null,
+      "retry": false,
+      "detail": "All bibliographic sources failed. See the search trace and API settings.",
+      "timestamp": "2026-11-20T13:00:32.009014+00:00"
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "planning",
+      "target": "search",
+      "objective": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+      "artifact": {
+        "origin": "planning",
+        "questions": [
+          {
+            "identifier": "RQ1",
+            "question": "Quels sont les critères d'évaluation empiriques utilisés pour comparer la performance des grandes modèles de langage dans l' Screening des titres et résumés par rapport aux méthodes traditionnelles lors de la réalisation d'une revue systématique ?"
+          },
+          {
+            "identifier": "RQ2",
+            "question": "Comment se compare-t-il le temps de traitement et la précision du tri des titres et résumés effectués par les grandes modèles de langage par rapport à l'approche humaine dans le contexte des revues systématiques ?"
+          },
+          {
+            "identifier": "RQ3",
+            "question": "Quels sont les avantages et inconvénients observés lors de l'utilisation des grandes modèles de langage pour l'évaluation initiale des titres et résumés dans la réalisation d'une revue systématique ?"
+          }
+        ],
+        "protocol": {
+          "queries": {
+            "openalex": "large language models title abstract systematic review",
+            "semantic_scholar": "large language models title abstract systematic review",
+            "crossref": "large language models title abstract systematic review"
+          },
+          "questions": [
+            {
+              "rq_id": "RQ1",
+              "terms": [
+                "empirical evaluation",
+                "performance comparison",
+                "traditional methods"
+              ],
+              "facets": [
+                {
+                  "id": "evaluation_criteria",
+                  "label": "Evaluation Criteria",
+                  "keywords": [
+                    "criteria",
+                    "metrics"
+                  ],
+                  "query_hint": "criteria metrics"
+                },
+                {
+                  "id": "model_performance",
+                  "label": "Model Performance",
+                  "keywords": [
+                    "accuracy",
+                    "precision"
+                  ],
+                  "query_hint": "accuracy precision"
+                }
+              ]
+            },
+            {
+              "rq_id": "RQ2",
+              "terms": [
+                "processing time",
+                "triage accuracy"
+              ],
+              "facets": [
+                {
+                  "id": "processing_time",
+                  "label": "Processing Time",
+                  "keywords": [
+                    "time",
+                    "speed"
+                  ],
+                  "query_hint": "time speed"
+                },
+                {
+                  "id": "triage_accuracy",
+                  "label": "Triage Accuracy",
+                  "keywords": [
+                    "precision",
+                    "recall"
+                  ],
+                  "query_hint": "precision recall"
+                }
+              ]
+            },
+            {
+              "rq_id": "RQ3",
+              "terms": [
+                "advantages",
+                "disadvantages"
+              ],
+              "facets": [
+                {
+                  "id": "advantages",
+                  "label": "Advantages",
+                  "keywords": [
+                    "benefits",
+                    "efficiency"
+                  ],
+                  "query_hint": "benefits efficiency"
+                },
+                {
+                  "id": "disadvantages",
+                  "label": "Disadvantages",
+                  "keywords": [
+                    "limitations",
+                    "errors"
+                  ],
+                  "query_hint": "limitations errors"
+                }
+              ]
+            }
+          ],
+          "include_signals": [
+            "empirical evaluation",
+            "title abstract screening",
+            "systematic literature review"
+          ],
+          "exclude_signals": [
+            "narrative review",
+            "unrelated screening tasks",
+            "outside systematic literature reviews"
+          ]
+        },
+        "plan": {
+          "strategy": "direct",
+          "objective": "Empirical evaluations of large language models for title and abstract screening in systematic literature reviews",
+          "steps": [
+            {
+              "id": "prepare-RQ1",
+              "rq_id": "RQ1",
+              "objective": "Quels sont les critères d'évaluation empiriques utilisés pour comparer la performance des grandes modèles de langage dans l' Screening des titres et résumés par rapport aux méthodes traditionnelles lors de la réalisation d'une revue systématique ?",
+              "evidence_ids": [],
+              "required_facets": [
+                "evaluation_criteria",
+                "model_performance"
+              ],
+              "depends_on": [],
+              "mode": "limitation"
+            },
+            {
+              "id": "prepare-RQ2",
+              "rq_id": "RQ2",
+              "objective": "Comment se compare-t-il le temps de traitement et la précision du tri des titres et résumés effectués par les grandes modèles de langage par rapport à l'approche humaine dans le contexte des revues systématiques ?",
+              "evidence_ids": [],
+              "required_facets": [
+                "processing_time",
+                "triage_accuracy"
+              ],
+              "depends_on": [],
+              "mode": "limitation"
+            },
+            {
+              "id": "prepare-RQ3",
+              "rq_id": "RQ3",
+              "objective": "Quels sont les avantages et inconvénients observés lors de l'utilisation des grandes modèles de langage pour l'évaluation initiale des titres et résumés dans la réalisation d'une revue systématique ?",
+              "evidence_ids": [],
+              "required_facets": [
+                "advantages",
+                "disadvantages"
+              ],
+              "depends_on": [],
+              "mode": "limitation"
+            }
+          ],
+          "reasoning_summary": [],
+          "explored_alternatives": [],
+          "llm_calls": 0
+        },
+        "repair_attempts": 0,
+        "protocol_repairs": 0
+      },
+      "evidence_ids": [],
+      "status": "ok",
+      "budget_left": 1
+    }
+  ],
+  "feedback": []
+}
